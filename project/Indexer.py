@@ -13,6 +13,11 @@ class Indexer:
         self.word_to_id = {}
         self.id_to_word = {}
 
+        # for sqlite3 database
+        self.connection = None
+        self.cursor = None
+        self.prepareSQLite()
+
     
     def buildBodyInvertedIndex(self, words: list[str], url_id: str) -> None:
         # format is as follows:
@@ -119,3 +124,95 @@ class Indexer:
 
                 self.word_to_id[word] = word_id
                 self.id_to_word[word_id] = word
+    
+
+    def prepareSQLite(self):
+        self.connection = sqlite3.connect("main.db")
+        self.cursor = self.connection.cursor()
+
+
+        # if the table `body_inverted_index` not exist, create it first
+        if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='body_inverted_index';").fetchone() is None:
+            self.cursor.execute(f"CREATE TABLE body_inverted_index(wordId, value);")
+        # otherwise, retrieve all data from the DB table and put it in `self.body_inverted_index`
+        else:
+            result = self.cursor.execute(f"SELECT * FROM body_inverted_index;").fetchall()
+            for (wordId, value) in result:
+                current_row_value = {}
+
+                entries = value.split(" ")
+                for entry in entries:
+                    parts = entry.split(";")
+
+                    url_id = parts[0]
+                    word_frequency = parts[1]
+                    positions = list(map(int, parts[2].split(",")))
+
+                    current_row_value[url_id] = {
+                        "frequency": word_frequency,
+                        "positions": positions
+                    }
+                
+                self.body_inverted_index[wordId] = current_row_value
+        
+        # if the table `title_inverted_index` not exist, create it first
+        if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='title_inverted_index';").fetchone() is None:
+            self.cursor.execute(f"CREATE TABLE title_inverted_index(wordId, value);")
+        # otherwise, retrieve all data from the DB table and put it in `self.title_inverted_index`
+        else:
+            result = self.cursor.execute(f"SELECT * FROM title_inverted_index;").fetchall()
+            for (wordId, value) in result:
+                current_row_value = {}
+
+                entries = value.split(" ")
+                for entry in entries:
+                    parts = entry.split(";")
+
+                    url_id = parts[0]
+                    word_frequency = parts[1]
+                    positions = list(map(int, parts[2].split(",")))
+
+                    current_row_value[url_id] = {
+                        "frequency": word_frequency,
+                        "positions": positions
+                    }
+                
+                self.title_inverted_index[wordId] = current_row_value
+
+
+        # if the table `forward_index` not exist, create it first
+        if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='forward_index';").fetchone() is None:
+            self.cursor.execute(f"CREATE TABLE forward_index(urlId, value);")
+        # otherwise, retrieve all data from the DB table and put it in `self.forward_index`
+        else:
+            result = self.cursor.execute(f"SELECT * FROM forward_index;").fetchall()
+            for row in result:
+                url_id = row[0]
+                value = row[1].split(" ")
+                self.forward_index[url_id] = value
+
+
+        # if the table `word_to_id` not exist, create it first
+        if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='word_to_id';").fetchone() is None:
+            self.cursor.execute(f"CREATE TABLE word_to_id(word, wordId);")
+        # otherwise, retrieve all data from the DB table and put it in `self.word_to_id`
+        else:
+            result = self.cursor.execute(f"SELECT * FROM word_to_id;").fetchall()
+            for row in result:
+                word = row[0]
+                word_id = row[1]
+                self.word_to_id[word] = word_id
+        
+        # if the table `id_to_word` not exist, create it first
+        if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='id_to_word';").fetchone() is None:
+            self.cursor.execute(f"CREATE TABLE id_to_word(wordId, word);")
+        # otherwise, retrieve all data from the DB table and put it in `self.id_to_word`
+        else:
+            result = self.cursor.execute(f"SELECT * FROM id_to_word;").fetchall()
+            for row in result:
+                word_id = row[0]
+                word = row[1]
+                self.id_to_word[word_id] = word
+        
+        # commit the transaction done above
+        self.connection.commit()
