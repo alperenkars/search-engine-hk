@@ -216,3 +216,106 @@ class Indexer:
         
         # commit the transaction done above
         self.connection.commit()
+    
+    def updateSQLiteDB(self) -> None:
+        
+        # body & title inverted index
+
+        # remove all data in the database table `body_inverted_index` first
+        # re-create the empty database table `body_inverted_index`
+        # update all the data in the table
+        # commit the transaction
+        self.cursor.execute(f"DROP TABLE body_inverted_index;")
+        self.cursor.execute(f"CREATE TABLE body_inverted_index(wordId, value);")
+
+        body_inverted_index_key_value_list = []
+        for (key, value) in self.body_inverted_index.items():
+            formatted_entries = []
+
+            for (url_id, inner_value) in value.items():
+                # value format: urlId1;frequency1;position1 urlId2;frequency2;position2,position3,position4 ...
+                positions = ",".join(map(str, inner_value["positions"]))
+                formatted_entry = f"{url_id};{inner_value["frequency"]};{positions}"
+                formatted_entries += [formatted_entry]
+            
+            # join all formatted entries into a single string separated by spaces
+            combined_value = " ".join(formatted_entries)
+
+            # append the tuple (key, combined_value) to the list
+            body_inverted_index_key_value_list += [(key, combined_value)]
+
+        self.cursor.executemany(f"INSERT INTO body_inverted_index VALUES(?, ?);", body_inverted_index_key_value_list)
+        self.connection.commit()
+
+        # remove all data in the database table `title_inverted_index` first
+        # re-create the empty database table `title_inverted_index`
+        # update all the data in the table
+        # commit the transaction
+        self.cursor.execute(f"DROP TABLE title_inverted_index;")
+        self.cursor.execute(f"CREATE TABLE title_inverted_index(wordId, value);")
+
+        title_inverted_index_key_value_list = []
+        for (key, value) in self.title_inverted_index.items():
+            formatted_entries = []
+
+            for (url_id, inner_value) in value.items():
+                # value format: urlId1;frequency1;position1 urlId2;frequency2;position2,position3,position4 ...
+                positions = ",".join(map(str, inner_value["positions"]))
+                formatted_entry = f"{url_id};{inner_value["frequency"]};{positions}"
+                formatted_entries += [formatted_entry]
+            
+            # join all formatted entries into a single string separated by spaces
+            combined_value = " ".join(formatted_entries)
+
+            # append the tuple (key, combined_value) to the list
+            title_inverted_index_key_value_list += [(key, combined_value)]
+
+        self.cursor.executemany(f"INSERT INTO title_inverted_index VALUES(?, ?);", title_inverted_index_key_value_list)
+        self.connection.commit()
+
+
+        # forward index
+
+        # remove all data in the database table `forward_index` first
+        # re-create the empty database table `forward_index`
+        # update all the data in the table
+        # commit the transaction
+        self.cursor.execute(f"DROP TABLE forward_index;")
+        self.cursor.execute(f"CREATE TABLE forward_index(urlId, value);")
+
+        forward_index_key_value_list = []
+        for (key, value) in self.forward_index.items():
+            # Join the list of values with space into a single string
+            # joined_value format: wordId1 wordId2 wordId3 ...
+            joined_value = " ".join(value)
+            forward_index_key_value_list += [(key, joined_value)]
+
+        self.cursor.executemany(f"INSERT INTO forward_index VALUES(?, ?);", forward_index_key_value_list)
+        self.connection.commit()
+
+
+        # word <-> word_id conversion
+
+        # remove all data in the database table `word_to_id` first
+        # re-create the empty database table `word_to_id`
+        # update all the data in the table
+        # commit the transaction
+        self.cursor.execute(f"DROP TABLE word_to_id;")
+        self.cursor.execute(f"CREATE TABLE word_to_id(word, wordId);")
+        self.cursor.executemany(f"INSERT INTO word_to_id VALUES(?, ?);", list(self.word_to_id.items()))
+        self.connection.commit()
+
+        # remove all data in the database table `id_to_word` first
+        # re-create the empty database table `id_to_word`
+        # update all the data in the table
+        # commit the transaction
+        self.cursor.execute(f"DROP TABLE id_to_word;")
+        self.cursor.execute(f"CREATE TABLE id_to_word(wordId, word);")
+        self.cursor.executemany(f"INSERT INTO id_to_word VALUES(?, ?);", list(self.id_to_word.items()))
+        self.connection.commit()
+
+
+
+
+
+        
