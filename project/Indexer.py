@@ -126,7 +126,7 @@ class Indexer:
                 self.id_to_word[word_id] = word
     
 
-    def prepareSQLiteDB(self):
+    def prepareSQLiteDB(self) -> None:
         self.connection = sqlite3.connect("main.db")
         self.cursor = self.connection.cursor()
 
