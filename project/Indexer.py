@@ -16,7 +16,7 @@ class Indexer:
         # for sqlite3 database
         self.connection = None
         self.cursor = None
-        self.prepareSQLite()
+        self.prepareSQLiteDB()
 
     
     def buildBodyInvertedIndex(self, words: list[str], url_id: str) -> None:
@@ -126,7 +126,7 @@ class Indexer:
                 self.id_to_word[word_id] = word
     
 
-    def prepareSQLite(self):
+    def prepareSQLiteDB(self):
         self.connection = sqlite3.connect("main.db")
         self.cursor = self.connection.cursor()
 
