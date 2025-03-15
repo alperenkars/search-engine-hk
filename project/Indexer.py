@@ -13,18 +13,6 @@ class Indexer:
         self.word_to_id = {}
         self.id_to_word = {}
 
-    def addNewWord(self, words: list[str]) -> None:
-        # if a word is not appeared in word_to_id
-        # generate a new uuid
-        # add corresponding word id to word_to_id
-        # add corresponding word to id_to_word
-        for word in words:
-            if self.word_to_id.get(word, None) is None:
-                new_id = uuid.uuid4()
-                word_id: str = str(int(new_id))
-
-                self.word_to_id[word] = word_id
-                self.id_to_word[word_id] = word
     
     def buildBodyInvertedIndex(self, words: list[str], url_id: str) -> None:
         # format is as follows:
@@ -118,3 +106,16 @@ class Indexer:
         
         # build the forward index for the given URL ID
         self.forward_index[url_id] = word_ids_list
+
+    def addNewWord(self, words: list[str]) -> None:
+        # if a word is not appeared in word_to_id
+        # generate a new uuid
+        # add corresponding word id to word_to_id
+        # add corresponding word to id_to_word
+        for word in words:
+            if self.word_to_id.get(word, None) is None:
+                new_id = uuid.uuid4()
+                word_id: str = str(int(new_id))
+
+                self.word_to_id[word] = word_id
+                self.id_to_word[word_id] = word
