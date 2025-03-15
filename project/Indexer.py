@@ -3,6 +3,8 @@ import sqlite3
 
 class Indexer:
 
+    # Initialization
+
     def __init__(self):
 
         self.body_inverted_index = {}
@@ -18,6 +20,8 @@ class Indexer:
         self.cursor = None
         self.prepareSQLiteDB()
 
+
+    # Indexer core functions
     
     def buildBodyInvertedIndex(self, words: list[str], url_id: str) -> None:
         # format is as follows:
@@ -125,6 +129,8 @@ class Indexer:
                 self.word_to_id[word] = word_id
                 self.id_to_word[word_id] = word
     
+
+    # SQLite database functions
 
     def prepareSQLiteDB(self) -> None:
         self.connection = sqlite3.connect("main.db")
