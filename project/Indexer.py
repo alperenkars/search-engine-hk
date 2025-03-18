@@ -37,7 +37,7 @@ class Indexer:
             else:
                 word_position_dict[word] = [i]
         
-        for (word, positions) in word_position_dict.item():
+        for (word, positions) in word_position_dict.items():
             word_id: str = self.word_to_id[word]
 
             # if body_inverted_index already contain the url ID
@@ -71,7 +71,7 @@ class Indexer:
             else:
                 word_position_dict[word] = [i]
         
-        for (word, positions) in word_position_dict.item():
+        for (word, positions) in word_position_dict.items():
             word_id: str = self.word_to_id[word]
 
             # if title_inverted_index already contain the url ID
