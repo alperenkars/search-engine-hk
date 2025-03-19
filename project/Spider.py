@@ -8,8 +8,8 @@ import time
 from Indexer import Indexer
 import re
 from ContentExtractor import ContentExtractor
-from nltk.stem.snowball import SnowballStemmer
-from StopStem import StopStem  # Import StopStem class
+from StopwordRemovalStem import StopwordRemovalStem # Import StopwordRemovalStem class
+
 
 """ NOTES """
 """ 
@@ -37,7 +37,7 @@ class Spider:
 
         self.indexer = indexer
         self.extractor = ContentExtractor()
-        self.stop_stem = StopStem()  # stopstem part
+        self.stop_stem = StopwordRemovalStem()  # stopword removal and stemming part
         self.create_spider_tables()
 
     def create_spider_tables(self):
@@ -102,7 +102,8 @@ class Spider:
      # fetch the page from given url and return the response
     def fetch_page(self, url: str):
         try:
-            response = requests.get(url, timeout=5)
+            # response = requests.get(url, timeout=10) # set timeout be 10 seconds
+            response = requests.get(url) # set time out to be infinitely long
             response.raise_for_status()
             return response
         except requests.RequestException as e:
@@ -170,7 +171,7 @@ class Spider:
             page_title = self.extractor.getTitle(response.text)
             body_text = self.extractor.getBodyText(response.text)
             body_words = self.extractor.splitWords(body_text)
-            processed_body_words = self.stop_stem.process(body_words)  # lastly added stopstem part
+            processed_body_words = self.stop_stem.transform(body_words)  # lastly added stopstem part
             self.indexer.addNewWord(processed_body_words)
             self.indexer.buildBodyInvertedIndex(processed_body_words, current_url_id)
             self.indexer.buildForwardIndex(processed_body_words, current_url_id)
@@ -178,7 +179,7 @@ class Spider:
             # here we go one step further and index the title as well
             if page_title:
                 title_words = self.extractor.splitWords(page_title.lower())
-                processed_title_words = self.stop_stem.process(title_words)  # do stopstem for this too
+                processed_title_words = self.stop_stem.transform(title_words)  # do stopstem for this too
                 self.indexer.addNewWord(processed_title_words)
                 self.indexer.buildTitleInvertedIndex(processed_title_words, current_url_id)
                 self.indexer.buildForwardIndex(processed_title_words, current_url_id)

@@ -233,7 +233,7 @@ class Indexer:
             for (url_id, inner_value) in value.items():
                 # value format: urlId1;frequency1;position1 urlId2;frequency2;position2,position3,position4 ...
                 positions = ",".join(map(str, inner_value["positions"]))
-                formatted_entry = f"{url_id};{inner_value["frequency"]};{positions}"
+                formatted_entry = f"{url_id};{inner_value['frequency']};{positions}"
                 formatted_entries += [formatted_entry]
             
             # join all formatted entries into a single string separated by spaces
@@ -259,7 +259,7 @@ class Indexer:
             for (url_id, inner_value) in value.items():
                 # value format: urlId1;frequency1;position1 urlId2;frequency2;position2,position3,position4 ...
                 positions = ",".join(map(str, inner_value["positions"]))
-                formatted_entry = f"{url_id};{inner_value["frequency"]};{positions}"
+                formatted_entry = f"{url_id};{inner_value['frequency']};{positions}"
                 formatted_entries += [formatted_entry]
             
             # join all formatted entries into a single string separated by spaces
