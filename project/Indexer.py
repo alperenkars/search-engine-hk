@@ -2,22 +2,15 @@ import uuid
 import sqlite3
 
 class Indexer:
-
-    # Initialization
-
-    def __init__(self):
-
+    def __init__(self, db_connection: sqlite3.Connection):
         self.body_inverted_index = {}
         self.title_inverted_index = {}
-
         self.forward_index = {}
-
         self.word_to_id = {}
         self.id_to_word = {}
 
-        # for sqlite3 database
-        self.connection = None
-        self.cursor = None
+        self.connection = db_connection  # Use shared database connection
+        self.cursor = self.connection.cursor()
         self.prepareSQLiteDB()
 
 
@@ -37,7 +30,7 @@ class Indexer:
             else:
                 word_position_dict[word] = [i]
         
-        for (word, positions) in word_position_dict.item():
+        for (word, positions) in word_position_dict.items():
             word_id: str = self.word_to_id[word]
 
             # if body_inverted_index already contain the url ID
@@ -71,7 +64,7 @@ class Indexer:
             else:
                 word_position_dict[word] = [i]
         
-        for (word, positions) in word_position_dict.item():
+        for (word, positions) in word_position_dict.items():
             word_id: str = self.word_to_id[word]
 
             # if title_inverted_index already contain the url ID
@@ -133,7 +126,6 @@ class Indexer:
     # SQLite database functions
 
     def prepareSQLiteDB(self) -> None:
-        self.connection = sqlite3.connect("main.db")
         self.cursor = self.connection.cursor()
 
 
@@ -324,4 +316,4 @@ class Indexer:
 
 
 
-        
+

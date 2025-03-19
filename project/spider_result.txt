@@ -1,0 +1,1806 @@
+Test page
+https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm
+Tue, 16 May 2023 05:03:16 GMT, 603
+read 1; crawler 1; cse 1; intern 1; get 1; list 1; news 1; admiss 1; page 1; book 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/books.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+CSE department of HKUST
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse.htm
+Tue, 16 May 2023 05:03:16 GMT, 392
+cse 1; admiss 2; ug 1; pg 1; main 1; depart 1; hkust 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse/PG.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse/UG.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm
+------------------------------
+News
+https://www.cse.ust.hk/~kwtleung/COMP4321/news.htm
+Tue, 16 May 2023 05:03:16 GMT, 384
+news 3; main 1; bbc 1; cnn 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/cnn.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm
+------------------------------
+books
+https://www.cse.ust.hk/~kwtleung/COMP4321/books.htm
+Tue, 16 May 2023 05:03:16 GMT, 601
+read 1; articl 1; machine-read 1; data 1; classif 1; relev 1; note 1; generat 1; base 1; inform 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/books/book1.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/books/book2.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/books/book3.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm
+------------------------------
+Movie Index Page
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+Tue, 16 May 2023 05:09:22 GMT, 19541
+geeta 1; conspiraci 1; fool 1; extend 1; amazon 1; lodoss 1; world 3; crash 1; westend 1; tank 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/1.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/2.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/3.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/4.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/5.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/6.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/7.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/8.html
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/9.html
+------------------------------
+PG
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse/PG.htm
+Tue, 16 May 2023 05:03:46 GMT, 3267
+instruct 1; remedi 1; phd 2; grade 1; form 1; background 1; english 6; committe 1; enhanc 1; languag 4
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse.htm
+------------------------------
+UG
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse/UG.htm
+Tue, 16 May 2023 05:03:46 GMT, 4070
+ 1; provid 3; entranc 1; special 2; found 1; convers 1; suit 1; english 2; present 1; spectrum 3
+https://www.cse.ust.hk/~kwtleung/COMP4321/ust_cse.htm
+------------------------------
+BBC news
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc.htm
+Tue, 16 May 2023 05:03:44 GMT, 499
+project 1; fifth 1; west 1; ham 1; blackburn 1; mp 1; bird 1; goonhilli 1; news 2; urg 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc1.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc2.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc3.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news.htm
+------------------------------
+CNN news
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/cnn.htm
+Tue, 16 May 2023 05:03:44 GMT, 448
+sauerkraut 1; capit 1; caus 1; cnn 1; sweet 1; news 2; may 1; chao 1; econom 1; warm 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/cnn1.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/cnn2.htm
+https://www.cse.ust.hk/~kwtleung/COMP4321/news.htm
+------------------------------
+book1
+https://www.cse.ust.hk/~kwtleung/COMP4321/books/book1.htm
+Tue, 16 May 2023 05:03:16 GMT, 1617
+structur 1; provid 1; difficulti 1; document 1; account 1; view 1; retriev 5; book 2; ratio 2; precis 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/books.htm
+------------------------------
+book2
+https://www.cse.ust.hk/~kwtleung/COMP4321/books/book2.htm
+Tue, 16 May 2023 05:03:16 GMT, 2084
+al 1; retriev 3; book 1; consult 1; miniatur 1; paper 1; registri 2; research 1; organ 1; cas 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/books.htm
+------------------------------
+book3
+https://www.cse.ust.hk/~kwtleung/COMP4321/books/book3.htm
+Tue, 16 May 2023 05:03:16 GMT, 1994
+provid 2; accept 1; percentag 1; retriev 1; book 2; presum 1; measur 1; articl 1; cours 1; subject 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/books.htm
+------------------------------
+Dinosaur Planet (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/1.html
+Tue, 16 May 2023 05:03:16 GMT, 3605
+plot 2; provid 1; found 1; special 3; star 2; 1996 1; tip 1; languag 1; licens 1; vg 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Isle of Man TT 2004 Review (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/2.html
+Tue, 16 May 2023 05:03:26 GMT, 2868
+plot 2; provid 1; found 1; untouch 1; special 1; tip 1; languag 1; licens 1; offici 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Character (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/3.html
+Tue, 16 May 2023 05:03:36 GMT, 4008
+plot 2; stori 1; provid 1; found 1; special 1; english 2; 1996 2; muert 1; tip 1; bodi 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Paula Abdul's Get Up and Dance (1994)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/4.html
+Tue, 16 May 2023 05:03:38 GMT, 2820
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Rise and Fall of ECW (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/5.html
+Tue, 16 May 2023 05:03:38 GMT, 3928
+plot 2; provid 1; found 1; fall 27; special 2; english 1; tip 1; jim 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sick (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/6.html
+Tue, 16 May 2023 05:03:40 GMT, 5243
+plot 2; stori 1; provid 1; found 1; special 1; angri 1; english 3; 1996 1; friend 1; poor 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+8 Man (1992)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/7.html
+Tue, 16 May 2023 05:03:40 GMT, 3498
+plot 2; provid 1; found 1; special 1; subet 1; tip 1; x-8 3; 13th 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+What the #$*! Do We Know!? (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/8.html
+Tue, 16 May 2023 05:03:42 GMT, 4147
+plot 2; stori 1; provid 1; found 1; special 1; english 4; tri 1; tip 1; 13th 1; digit 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Class of Nuke 'Em High 2 (1991)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/9.html
+Tue, 16 May 2023 05:03:44 GMT, 7075
+provid 1; jacqulyn 1; languag 1; author 1; licens 1; moen 2; jackson 1; they'r 1; omiss 1; 3100 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Fighter (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/10.html
+Tue, 16 May 2023 05:03:16 GMT, 13199
+provid 1; johanna 2; jap 1; freedom 4; 1996 9; manti 1; languag 1; licens 1; vg 40; guan 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Full Frame: Documentary Shorts (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/11.html
+Tue, 16 May 2023 05:03:18 GMT, 2700
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+My Favorite Brunette (1947)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/12.html
+Tue, 16 May 2023 05:03:18 GMT, 6432
+provid 1; languag 1; author 1; licens 1; flip 1; jackson 2; listingmovi 1; dope 2; pictur 1; land 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Lord of the Rings: The Return of the King: Extended Edition: Bonus Material (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/13.html
+Tue, 16 May 2023 05:03:20 GMT, 2997
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Nature: Antarctica (1982)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/14.html
+Tue, 16 May 2023 05:03:20 GMT, 3711
+plot 2; provid 1; found 1; special 1; english 2; tip 1; gwar 1; languag 1; licens 1; projekt 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Neil Diamond: Greatest Hits Live (1988)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/15.html
+Tue, 16 May 2023 05:03:20 GMT, 5415
+plot 5; stupid 1; awhil 1; found 1; special 1; provid 1; comment 5; los 2; actual 1; english 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Screamers (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/16.html
+Tue, 16 May 2023 05:03:22 GMT, 3737
+plot 2; provid 1; found 1; halloween 1; special 1; itali 1; 1996 2; dreamer 4; pesc 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+7 Seconds (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/17.html
+Tue, 16 May 2023 05:03:22 GMT, 3521
+plot 2; provid 1; found 1; special 1; desert 1; english 1; tip 1; septemb 2; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Immortal Beloved (1994)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/18.html
+Tue, 16 May 2023 05:03:24 GMT, 7583
+provid 1; johanna 2; fascin 1; simpli 2; histor 1; languag 1; author 1; licens 1; 8 1; icon 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+By Dawn's Early Light (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/19.html
+Tue, 16 May 2023 05:03:24 GMT, 2827
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Seeta Aur Geeta (1972)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/20.html
+Tue, 16 May 2023 05:03:26 GMT, 5856
+provid 1; london 1; languag 1; septemb 1; author 1; licens 1; 8 1; cine 1; listingmovi 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Strange Relations (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/21.html
+Tue, 16 May 2023 05:03:26 GMT, 6405
+provid 1; girltodd 1; languag 2; author 1; measur 1; licens 1; yeswell-act 2; lipman 3; gift 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Chump Change (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/22.html
+Tue, 16 May 2023 05:03:28 GMT, 6333
+ 1; provid 1; stephen 3; languag 2; author 1; licens 1; chucki 1; evil 1; omiss 1; class 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Clifford: Clifford Saves the Day! / Clifford's Fluffiest Friend Cleo (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/23.html
+Tue, 16 May 2023 05:03:28 GMT, 3844
+plot 2; provid 1; found 1; special 1; tip 1; easi 1; languag 1; speci 1; licens 1; princ 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+My Bloody Valentine (1981)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/24.html
+Tue, 16 May 2023 05:03:30 GMT, 6894
+provid 1; stephen 1; norway 1; 13th 3; languag 1; 14th 1; author 1; licens 1; they'r 1; mbv 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Inspector Morse 31: Death Is Now My Neighbour (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/25.html
+Tue, 16 May 2023 05:03:30 GMT, 2660
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Never Die Alone (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/26.html
+Tue, 16 May 2023 05:03:32 GMT, 7213
+provid 1; actual 1; apart 1; languag 2; author 1; licens 1; aren't 1; 8 1; listingmovi 1; powel 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sesame Street: Elmo's World: The Street We Live On (1962)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/27.html
+Tue, 16 May 2023 05:03:32 GMT, 3821
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; child 2; brows 1; museum 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Lilo and Stitch (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/28.html
+Tue, 16 May 2023 05:03:34 GMT, 3863
+plot 2; provid 1; found 1; special 1; chronicl 4; tip 1; languag 1; licens 1; vg 2; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Boycott (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/29.html
+Tue, 16 May 2023 05:03:36 GMT, 3302
+plot 2; provid 1; found 1; special 1; los 1; english 2; tip 1; cole 2; languag 1; des 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Something's Gotta Give (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/30.html
+Tue, 16 May 2023 05:03:36 GMT, 9304
+provid 1; actual 1; norway 1; languag 2; author 1; licens 1; 8 2; beautydaniella 1; hospit 1; pictur 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Classic Albums: Meat Loaf: Bat Out of Hell (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/31.html
+Tue, 16 May 2023 05:03:36 GMT, 4787
+plot 5; provid 1; found 1; comment 5; english 1; countri 1; award 2; aspect 1; tip 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+ABC Primetime: Mel Gibson's The Passion of the Christ (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/32.html
+Tue, 16 May 2023 05:03:36 GMT, 2716
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Aqua Teen Hunger Force: Vol. 1 (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/33.html
+Tue, 16 May 2023 05:03:36 GMT, 2759
+plot 2; provid 1; found 1; special 1; forc 9; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Ashtanga Yoga: Beginner's Practice with Nicki Doane (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/34.html
+Tue, 16 May 2023 05:03:36 GMT, 2702
+plot 2; yoga 6; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Ferngully 2: The Magical Rescue (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/35.html
+Tue, 16 May 2023 05:03:36 GMT, 6086
+provid 1; mission 1; matt 1; author 1; licens 1; 8 1; land 1; koda 1; omiss 1; erik 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Lady Chatterley (1992)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/36.html
+Tue, 16 May 2023 05:03:36 GMT, 3839
+plot 2; stori 2; provid 1; found 1; busch 1; special 1; english 2; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Zatoichi's Conspiracy (1973)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/37.html
+Tue, 16 May 2023 05:03:36 GMT, 6818
+provid 1; produc 1; statu 1; conspiracyzat 1; sake 1; languag 1; author 1; licens 1; honor 1; 1973 4
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Daydream Obsession (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/38.html
+Tue, 16 May 2023 05:03:38 GMT, 3745
+plot 2; stori 1; provid 1; found 1; fall 2; special 1; tip 1; bodi 1; person 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Love Reinvented (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/39.html
+Tue, 16 May 2023 05:03:38 GMT, 6494
+provid 1; aud 1; 1996 6; languag 1; author 1; licens 1; invent 5; ve 1; cl 1; perspect 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Pitcher and the Pin-Up (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/40.html
+Tue, 16 May 2023 05:03:38 GMT, 5819
+plot 6; stori 5; provid 1; mpaa 1; fordashleigh 1; vinc 1; found 1; michael 1; strong 1; comment 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Horror Vision (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/41.html
+Tue, 16 May 2023 05:03:38 GMT, 3793
+plot 2; the 2; horrorvis 1; found 1; special 1; provid 1; mansion 1; redford 1; english 1; bloodsuck 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Searching for Paradise (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/42.html
+Tue, 16 May 2023 05:03:38 GMT, 6426
+provid 1; matteichri 1; languag 2; author 1; licens 1; louis 2; omiss 1; 2 1; drama 1; carl 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Silent Service (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/43.html
+Tue, 16 May 2023 05:03:38 GMT, 3683
+plot 2; stori 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; tout 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Spitfire Grill (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/44.html
+Tue, 16 May 2023 05:03:38 GMT, 7514
+provid 1; hoe 1; cormier 1; 1996 7; lee 2; simpli 1; guilt-ridden 1; languag 1; hear 1; author 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Love Letter (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/45.html
+Tue, 16 May 2023 05:03:38 GMT, 3511
+plot 2; provid 1; found 1; special 1; teralba 1; english 2; 1996 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Rudolph the Red-Nosed Reindeer (1964)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/46.html
+Tue, 16 May 2023 05:03:38 GMT, 2849
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Bad and the Beautiful (1952)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/47.html
+Tue, 16 May 2023 05:03:38 GMT, 3892
+plot 2; the 1; stori 1; found 1; special 1; provid 1; english 3; 1996 1; dreamer 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Justice League (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/48.html
+Tue, 16 May 2023 05:03:38 GMT, 3580
+plot 2; provid 1; found 1; special 1; 2010 1; english 1; 1996 1; savag 1; tip 1; el 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Devo: The Complete Truth About De-evolution (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/49.html
+Tue, 16 May 2023 05:03:38 GMT, 2866
+plot 2; stori 1; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+A Yank in the R.A.F. (1941)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/50.html
+Tue, 16 May 2023 05:03:38 GMT, 7217
+provid 1; charismat 1; tyron 3; ban 1; model 1; languag 1; author 1; hear 1; licens 1; haven't 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Jonah: A VeggieTales Movie: Bonus Material (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/51.html
+Tue, 16 May 2023 05:03:38 GMT, 2781
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Weather Underground (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/52.html
+Tue, 16 May 2023 05:03:38 GMT, 10792
+provid 1; charismat 1; courag 1; actual 1; simpli 1; terrorist 1; counterpart 1; languag 1; author 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Bonesetter (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/53.html
+Tue, 16 May 2023 05:03:38 GMT, 3566
+mountain 1; plot 2; squad 1; provid 1; found 1; halloween 1; bridget 1; special 1; english 1; mo 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+We're Not Married (1952)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/54.html
+Tue, 16 May 2023 05:03:38 GMT, 5636
+provid 1; calhern 1; actual 1; woodruffeddi 1; languag 1; author 1; licens 1; jone 1; listingmovi 1; arden 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Jade (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/55.html
+Tue, 16 May 2023 05:03:38 GMT, 7977
+provid 1; matt 1; chinatown 1; simpli 1; norway 1; languag 2; author 1; licens 1; pictur 1; justin 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Carandiru (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/56.html
+Tue, 16 May 2023 05:03:38 GMT, 2769
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; lichnoy 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Richard III (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/57.html
+Tue, 16 May 2023 05:03:38 GMT, 7318
+provid 1; annejohn 1; actual 1; london 1; impress 1; languag 1; author 1; licens 1; 8 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Dragonheart (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/58.html
+Tue, 16 May 2023 05:03:40 GMT, 7828
+provid 1; bratislava 1; louisvill 1; 1996 5; braveheart 1; languag 1; author 1; licens 1; ontario 1; pictur 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sex and the Beauties (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/59.html
+Tue, 16 May 2023 05:03:40 GMT, 6428
+provid 1; produc 1; lee 1; triad 1; languag 1; kwanandi 1; author 1; licens 1; owner 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Libertine (1969)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/60.html
+Tue, 16 May 2023 05:03:40 GMT, 3873
+plot 2; the 1; provid 1; found 1; special 1; freedom 1; english 2; dormant 1; war 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Ricky Martin: One Night Only (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/61.html
+Tue, 16 May 2023 05:03:40 GMT, 4172
+plot 5; provid 1; comment 2; english 1; countri 1; award 2; tip 1; languag 1; licens 1; offici 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Ken Burns' America: Empire of the Air (1991)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/62.html
+Tue, 16 May 2023 05:03:40 GMT, 3769
+plot 2; stori 3; provid 1; found 1; hijack 1; special 1; bomb 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Crash Dive (1943)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/63.html
+Tue, 16 May 2023 05:03:40 GMT, 6958
+ 1; burnett 1; provid 1; tyron 3; mission 1; fascin 1; london 1; languag 1; author 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Outside the Law (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/64.html
+Tue, 16 May 2023 05:03:40 GMT, 3775
+plot 2; provid 1; found 1; special 1; english 3; tip 1; languag 1; licens 1; 8 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Lost in the Pershing Point Hotel (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/65.html
+Tue, 16 May 2023 05:03:40 GMT, 5762
+plot 5; stori 1; provid 1; chandler 2; storytellererin 1; found 1; elliott 1; star 1; comment 5; los 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Barbarian Queen 2 (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/66.html
+Tue, 16 May 2023 05:03:40 GMT, 3663
+plot 2; provid 1; found 1; special 1; conan 4; los 1; english 2; friend 1; tip 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Vampire Journals (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/67.html
+Tue, 16 May 2023 05:03:40 GMT, 6074
+provid 1; sword 1; sickle-1 1; languag 1; author 1; licens 1; 8 1; iwtv 1; niculescu 1; evil 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Invader Zim (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/68.html
+Tue, 16 May 2023 05:03:40 GMT, 9570
+horvitz 2; provid 1; mission 1; angri 2; yendisnob 1; languag 1; author 1; licens 1; despit 1; evil 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+WWE: Armageddon 2003 (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/69.html
+Tue, 16 May 2023 05:03:40 GMT, 2996
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; wwf 4; vg 2; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Tai Chi: The 24 Forms (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/70.html
+Tue, 16 May 2023 05:03:40 GMT, 3736
+plot 2; provid 1; found 1; special 1; star 1; form 9; 1996 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Maya Lin: A Strong Clear Vision (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/71.html
+Tue, 16 May 2023 05:03:40 GMT, 5590
+plot 6; provid 1; found 1; strong 4; comment 5; english 1; forc 1; you'll 1; countri 1; award 4
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+At Home Among Strangers (1974)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/72.html
+Tue, 16 May 2023 05:03:40 GMT, 4027
+svoy 1; plot 2; provid 1; found 1; special 1; stranger 35; english 3; nick 1; countri 1; friend 3
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Davy Crockett: 50th Anniversary Double Feature (1954)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/73.html
+Tue, 16 May 2023 05:03:40 GMT, 2667
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+6ixtynin9 (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/74.html
+Tue, 16 May 2023 05:03:40 GMT, 7152
+ownersurapong 1; provid 1; apart 2; grip 1; lee 1; languag 3; author 1; licens 1; 8 1; frighten 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Grind (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/75.html
+Tue, 16 May 2023 05:03:40 GMT, 5651
+gram 1; plot 5; stori 1; provid 1; found 2; comment 5; english 1; grip 1; countri 1; award 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+I Love Lucy: Season 2 (1952)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/76.html
+Tue, 16 May 2023 05:03:40 GMT, 3530
+plot 2; provid 1; found 1; special 2; english 1; bratwurst 1; tip 1; chan 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Congo (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/77.html
+Tue, 16 May 2023 05:03:40 GMT, 7052
+provid 1; norway 1; languag 2; author 1; licens 1; elliot 6; listingmovi 1; pictur 1; omiss 1; 2 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Jingle All the Way (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/78.html
+Tue, 16 May 2023 05:03:40 GMT, 8021
+provid 1; actual 1; bomb 5; 1996 5; cape 1; languag 2; author 1; licens 1; mailman 1; pictur 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Killing (1956)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/79.html
+Tue, 16 May 2023 05:03:42 GMT, 8474
+provid 1; 1996 5; model 1; el 3; duti 1; languag 1; licens 1; 1973 2; mort 1; passion 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Winter Kills (1979)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/80.html
+Tue, 16 May 2023 05:03:42 GMT, 8822
+provid 2; uncredit 1; perkin 2; yvett 1; languag 1; author 1; briefest 1; creepi 1; licens 1; they'r 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Antarctica: IMAX (1991)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/81.html
+Tue, 16 May 2023 05:03:42 GMT, 3738
+plot 2; stori 1; provid 1; found 1; special 1; english 2; tip 1; gwar 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Frogmen (1951)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/82.html
+Tue, 16 May 2023 05:03:42 GMT, 6731
+provid 1; andersen 1; fascin 1; disarm 1; septemb 1; languag 1; author 1; licens 1; 8 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Silkwood (1983)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/83.html
+Tue, 16 May 2023 05:03:42 GMT, 7241
+provid 1; pentagon 1; silver 1; histor 1; languag 1; author 1; creepi 1; licens 1; ricehenderson 1; clarita 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Powerpuff Girls Movie (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/84.html
+Tue, 16 May 2023 05:03:42 GMT, 8532
+provid 1; quotestriviagoofscrazi 1; norway 1; languag 1; author 1; hear 1; licens 1; 8 1; jackson 1; kindergarten 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Elfen Lied (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/85.html
+Tue, 16 May 2023 05:03:42 GMT, 3668
+plot 2; br 1; provid 1; found 1; beiaarden 1; meinem 3; het 2; special 1; los 1; donderdag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/86.html
+N/A, N/A
+
+
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/87.html
+N/A, N/A
+
+
+------------------------------
+Record of Lodoss War: Chronicles of the Heroic Knight (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/88.html
+Tue, 16 May 2023 05:03:42 GMT, 9657
+sorcer 1; provid 1; sword 1; chronicl 3; winant 1; languag 1; author 2; licens 1; 8 1; jackson 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Chain of Command (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/89.html
+Tue, 16 May 2023 05:03:44 GMT, 7134
+ 2; provid 1; retriev 1; sung 1; lee 1; terrorist 1; vice 1; valdezmichael 1; languag 2; author 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Lemon Drop Kid (1951)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/90.html
+Tue, 16 May 2023 05:03:44 GMT, 4072
+plot 2; provid 1; found 1; special 1; star 2; 40 1; shuten 2; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+WWE: Royal Rumble 2005 (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/91.html
+Tue, 16 May 2023 05:03:44 GMT, 3169
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; wwf 9; vg 2; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/92.html
+N/A, N/A
+
+
+------------------------------
+They Came Back (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/93.html
+Tue, 16 May 2023 05:03:44 GMT, 3504
+plot 2; provid 1; found 1; special 1; english 1; stephen 1; 1996 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+G3: Live in Concert (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/94.html
+Tue, 16 May 2023 05:03:44 GMT, 5093
+plot 6; provid 1; found 1; comment 5; book 1; g3 5; 1996 4; english 1; countri 1; award 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Dona Herlinda and Her Son (1985)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/95.html
+Tue, 16 May 2023 05:03:44 GMT, 5579
+plot 6; provid 1; found 1; toro 2; comment 5; itali 1; countri 2; award 3; aspect 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Inside the Space Station (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/96.html
+Tue, 16 May 2023 05:03:44 GMT, 4846
+plot 4; provid 1; found 1; statist 1; comment 5; stephen 1; english 1; countri 1; award 2; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Mostly Martha (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/97.html
+Tue, 16 May 2023 05:03:44 GMT, 2840
+plot 2; provid 1; marta 1; found 1; special 1; demostracij 1; english 1; beogradu 1; tip 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Battle of Algiers: Bonus Material (1965)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/98.html
+Tue, 16 May 2023 05:03:44 GMT, 2832
+plot 2; the 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+A Fishy Story (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/99.html
+Tue, 16 May 2023 05:03:44 GMT, 3271
+plot 2; stori 27; provid 1; found 1; special 1; antwon 2; tip 1; languag 1; licens 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sam the Iron Bridge (1993)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/100.html
+Tue, 16 May 2023 05:03:16 GMT, 4110
+ 1; plot 2; stori 1; provench 1; found 1; special 1; provid 1; english 3; tip 1; zhuang 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Complete Shamanic Princess (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/101.html
+Tue, 16 May 2023 05:03:16 GMT, 3166
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; princ 4; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Notre Musique (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/102.html
+Tue, 16 May 2023 05:03:16 GMT, 10796
+ 2; ramo 1; provid 1; sarah 2; dant 2; languag 1; author 1; septemb 1; licens 1; 8 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sanford and Son: Season 6 (1976)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/103.html
+Tue, 16 May 2023 05:03:16 GMT, 3771
+plot 2; provid 1; found 1; special 1; convers 1; howe 1; friend 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Great Race (1965)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/104.html
+Tue, 16 May 2023 05:03:16 GMT, 3678
+plot 2; the 1; bolshiy 1; found 1; special 1; provid 1; speed 1; desert 1; tip 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Obsessed (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/105.html
+Tue, 16 May 2023 05:03:18 GMT, 3535
+plot 2; provid 1; found 1; special 1; english 3; tip 1; languag 1; licens 1; black 2; invinc 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Stevie Ray Vaughan and Double Trouble: Live at Montreux 1982 and 1985 (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/106.html
+Tue, 16 May 2023 05:03:18 GMT, 5754
+plot 5; provid 1; found 1; stevi 9; comment 6; copeland 1; english 1; countri 1; award 2; vaughan 6
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Magnolia: Bonus Material (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/107.html
+Tue, 16 May 2023 05:03:18 GMT, 2513
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Spartan (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/108.html
+Tue, 16 May 2023 05:03:18 GMT, 7939
+provid 1; quotestriviagoofscrazi 1; naylormor 1; retriev 1; stephen 1; swedish 1; burch 2; languag 3; author 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+No Way Back (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/109.html
+Tue, 16 May 2023 05:03:18 GMT, 3379
+plot 2; provid 1; found 1; special 1; english 1; 1996 1; tip 1; languag 1; licens 1; 1949 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Scandal (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/110.html
+Tue, 16 May 2023 05:03:18 GMT, 7950
+difficulti 1; provid 1; produc 1; actual 1; chart 1; stephen 2; sung 1; mandi 3; london 1; histor 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Duplex (Widescreen) (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/111.html
+Tue, 16 May 2023 05:03:18 GMT, 2478
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Eye of Vichy (1993)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/112.html
+Tue, 16 May 2023 05:03:18 GMT, 7500
+provid 1; monsieur 5; chart 1; languag 1; author 1; licens 1; newsreel 1; pictur 1; goebbel 1; ferrer 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Bruce Lee: A Warrior's Journey (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/113.html
+Tue, 16 May 2023 05:03:18 GMT, 6989
+provid 1; thumb 1; lee 12; simpli 1; kareem 1; languag 1; author 1; licens 1; 8 2; richman 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Dominion Tank Police Part 1 and 2 (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/114.html
+Tue, 16 May 2023 05:03:18 GMT, 2792
+plot 2; provid 1; found 1; special 1; sensha-tai 1; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Lord Peter Wimsey: Murder Must Advertise (1973)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/115.html
+Tue, 16 May 2023 05:03:18 GMT, 8368
+provid 1; armstrong 2; smug 1; languag 1; author 1; licens 1; 8 1; 1973 4; dope 1; august 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Bear Cub (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/116.html
+Tue, 16 May 2023 05:03:18 GMT, 3868
+plot 2; provid 1; found 1; butsuki 1; special 1; english 6; 1996 2; chronicl 1; sophokl 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Silk Stockings (1957)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/117.html
+Tue, 16 May 2023 05:03:18 GMT, 6617
+provid 1; bumbl 1; mission 1; brankov 1; retriev 1; actual 1; sung 1; languag 1; author 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Rambo: First Blood Part II (1985)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/118.html
+Tue, 16 May 2023 05:03:18 GMT, 8604
+provid 1; medic 1; actual 1; lee 1; silver 1; norway 1; vice 1; languag 2; author 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Travel the World by Train: Africa (1999)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/119.html
+Tue, 16 May 2023 05:03:18 GMT, 3953
+plot 4; provid 1; comment 2; english 1; countri 1; award 2; tip 1; languag 1; licens 1; offici 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Plain Dirty (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/120.html
+Tue, 16 May 2023 05:03:18 GMT, 7025
+provid 1; angri 1; pond 1; languag 2; author 1; licens 1; 8 1; virginia 1; they'r 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Beyonce: Live at Wembley (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/121.html
+Tue, 16 May 2023 05:03:18 GMT, 3880
+dancerbeyonc 1; plot 4; provid 1; comment 2; nahum 1; english 1; countri 1; award 2; london 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/122.html
+N/A, N/A
+
+
+------------------------------
+Chain of Fools (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/123.html
+Tue, 16 May 2023 05:03:18 GMT, 7193
+provid 2; batch 1; zahn 3; septemb 1; languag 2; author 1; aren't 1; ontario 1; licens 1; ensemble-cast 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cold Blooded (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/124.html
+Tue, 16 May 2023 05:03:18 GMT, 3766
+plot 2; provid 1; found 1; special 1; english 4; 1996 1; amulett 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Nighthawks (1981)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/125.html
+Tue, 16 May 2023 05:03:20 GMT, 7979
+provid 1; terrorist 4; norway 1; el 1; languag 1; author 1; licens 1; august 1; sylvest 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Vampire Effect (aka Twins Effect) (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/126.html
+Tue, 16 May 2023 05:03:20 GMT, 3084
+plot 2; provid 1; found 1; special 1; tip 1; bin 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Fatal Beauty (1987)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/127.html
+Tue, 16 May 2023 05:03:20 GMT, 6802
+provid 1; produc 1; hijack 1; norway 1; delgadillo 1; languag 1; author 1; licens 1; aren't 1; frighten 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Mr. Vampire (1985)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/128.html
+Tue, 16 May 2023 05:03:20 GMT, 3977
+plot 2; provid 1; found 1; riley 1; special 1; al 1; english 2; mo 1; friend 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Darkwolf (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/129.html
+Tue, 16 May 2023 05:03:20 GMT, 3300
+plot 2; provid 1; found 1; special 1; perver 1; jungen 1; tip 1; languag 1; licens 1; rtlichkeit 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/130.html
+N/A, N/A
+
+
+------------------------------
+Arachnid (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/131.html
+Tue, 16 May 2023 05:03:20 GMT, 7156
+provid 1; produc 2; cartagena 1; languag 2; author 1; licens 1; 8 1; hora 1; despit 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/132.html
+N/A, N/A
+
+
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/133.html
+N/A, N/A
+
+
+------------------------------
+Spirit Lost (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/134.html
+Tue, 16 May 2023 05:03:20 GMT, 5370
+plot 6; stori 2; provid 1; mpaa 1; found 1; special 2; michael 1; strong 1; comment 5; book 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+GTO: Great Teacher Onizuka: Set 2 (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/135.html
+Tue, 16 May 2023 05:03:20 GMT, 2706
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cat and the Canary (1927)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/136.html
+Tue, 16 May 2023 05:03:20 GMT, 3394
+plot 2; 1939 1; putti 1; found 1; special 1; provid 1; english 2; countri 1; tip 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Naked Lies (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/137.html
+Tue, 16 May 2023 05:03:20 GMT, 5926
+provid 1; gather 1; xico 1; languag 2; author 1; licens 1; edelsbach 1; omiss 1; edward 1; except 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Star Trek: Voyager: Season 1 (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/138.html
+Tue, 16 May 2023 05:03:20 GMT, 4116
+plot 2; stori 1; provid 1; found 1; neobyknovennoy 1; star 26; special 1; english 2; forc 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Allergies: A Natural Approach (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/139.html
+Tue, 16 May 2023 05:03:20 GMT, 2548
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Lost in the Wild (1993)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/140.html
+Tue, 16 May 2023 05:03:20 GMT, 3997
+plot 2; provid 1; found 1; flight 1; special 1; invad 1; crash 1; 1996 2; dzikim 1; c'era 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Goddess of Mercy (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/141.html
+Tue, 16 May 2023 05:03:20 GMT, 4112
+plot 2; provid 1; found 1; special 1; star 1; vom 1; english 9; 1996 1; port 1; aa 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Tricky Master (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/142.html
+Tue, 16 May 2023 05:03:20 GMT, 6415
+provid 1; stephen 2; languag 1; author 1; licens 1; 8 1; soccer 2; omiss 1; ng 1; foontat-m 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Game (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/143.html
+Tue, 16 May 2023 05:03:20 GMT, 3283
+plot 2; provid 1; found 1; special 1; english 1; tip 1; languag 1; item 1; licens 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Deepak Chopra: The Way of the Wizard and Alchemy (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/144.html
+Tue, 16 May 2023 05:03:20 GMT, 2693
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Get Out Your Handkerchiefs (1978)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/145.html
+Tue, 16 May 2023 05:03:20 GMT, 6485
+provid 1; neighborel 1; languag 1; author 1; licens 1; 8 1; ve 1; omiss 1; 2 1; drama 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cannibal Women in the Avocado Jungle of Death (1988)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/146.html
+Tue, 16 May 2023 05:03:20 GMT, 6918
+provid 1; leaderpat 1; languag 1; hear 1; author 1; licens 1; avocado 11; maddoxjim 1; maintain 1; listingmovi 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Where Sleeping Dogs Lie (1992)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/147.html
+Tue, 16 May 2023 05:03:20 GMT, 5656
+plot 7; provid 1; found 1; mansion 1; comment 5; english 1; countri 1; award 3; whitcraft 2; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sweet November (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/148.html
+Tue, 16 May 2023 05:03:20 GMT, 8272
+provid 1; vinc 1; actual 1; chronicl 1; norway 1; languag 2; author 1; licens 1; 8 1; nam-turk 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Edward R. Murrow Collection (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/149.html
+Tue, 16 May 2023 05:03:20 GMT, 4092
+plot 2; stori 1; provid 1; found 1; special 1; english 2; 1996 1; savag 2; buri 2; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Firetrap (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/150.html
+Tue, 16 May 2023 05:03:20 GMT, 6335
+provid 1; shaqdaddi 1; mission 2; tyson 1; languag 1; author 1; licens 1; unbeknownst 1; traffic 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sleepover Nightmare (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/151.html
+Tue, 16 May 2023 05:03:22 GMT, 5969
+provid 1; languag 2; author 1; licens 1; hick 1; they'r 1; omiss 1; 2 3; airbag 2; bio 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+A Little Princess (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/152.html
+Tue, 16 May 2023 05:03:22 GMT, 3982
+plot 2; 1939 1; provid 1; found 1; special 1; wick 1; english 4; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+MTV Yoga (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/153.html
+Tue, 16 May 2023 05:03:22 GMT, 3576
+plot 2; yoga 21; the 1; found 1; special 2; star 1; natal 1; provid 1; english 1; happi 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Demon Warrior Koji (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/154.html
+Tue, 16 May 2023 05:03:22 GMT, 4114
+plot 2; provid 1; found 1; special 1; trooper 2; english 4; tip 1; languag 1; licens 1; senshi 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Strongest Man in the World (1975)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/155.html
+Tue, 16 May 2023 05:03:22 GMT, 3882
+plot 2; provid 1; found 1; special 1; english 1; 1996 1; ru 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Husbands and Wives (1992)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/156.html
+Tue, 16 May 2023 05:03:22 GMT, 7467
+provid 1; 3rd 1; analyst 1; septemb 1; languag 2; split 1; author 1; 8 1; licens 1; jackjuliett 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Laird: White Knuckle Extreme (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/157.html
+Tue, 16 May 2023 05:03:22 GMT, 2675
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+A Killer Within (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/158.html
+Tue, 16 May 2023 05:03:22 GMT, 8029
+provid 1; actual 2; stephen 1; sarah 1; shultzbethani 1; languag 2; author 1; tootl 1; hear 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Gentlemen of Fortune (1971)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/159.html
+Tue, 16 May 2023 05:03:22 GMT, 7526
+provid 1; vorobyova 1; mimino 1; actual 1; correspond 1; languag 1; author 1; licens 1; 8 2; haven't 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Gormenghast (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/160.html
+Tue, 16 May 2023 05:03:22 GMT, 6564
+provid 1; clumsi 1; lee 1; languag 1; author 2; licens 1; ontario 1; jackson 3; august 1; brisban 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Ninotchka (1939)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/161.html
+Tue, 16 May 2023 05:03:22 GMT, 7099
+provid 1; 1939 4; ban 2; italian 1; languag 1; author 1; licens 1; omiss 1; class 1; granach 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+John Cleese on How to Irritate People (1968)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/162.html
+Tue, 16 May 2023 05:03:22 GMT, 6997
+ 1; provid 1; languag 1; author 1; licens 1; ontario 1; omiss 1; 2 1; materi 1; shakespear 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+MTV: Making the Band 2: Best of Season 1 (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/163.html
+Tue, 16 May 2023 05:03:22 GMT, 4086
+plot 2; the 1; spoof 2; found 1; special 1; provid 1; mate 1; english 1; fairest 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+One Last Dance (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/164.html
+Tue, 16 May 2023 05:03:22 GMT, 6148
+provid 1; languag 1; septemb 1; author 1; licens 1; omiss 1; allison 1; webber 1; drama 1; bio 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Richard Pryor: Live on the Sunset Strip (1982)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/165.html
+Tue, 16 May 2023 05:03:22 GMT, 6062
+plot 6; stori 1; provid 1; found 1; march 2; slur 1; comment 6; pryor 13; english 1; 82 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Fame (1980)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/166.html
+Tue, 16 May 2023 05:03:22 GMT, 8511
+provid 1; produc 1; actual 2; italian 1; languag 1; author 1; licens 1; 8 2; moodi 2; haven't 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Chorus (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/167.html
+Tue, 16 May 2023 05:03:22 GMT, 4135
+plot 2; stori 1; provid 1; found 1; special 1; samaritan 1; vom 1; insect 1; english 1; sung 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Smokey and the Bandit Part 3 (1983)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/168.html
+Tue, 16 May 2023 05:03:22 GMT, 9575
+provid 1; norway 1; languag 1; author 1; licens 1; aren't 1; ontario 1; pictur 1; louis 1; august 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cartoon Network Halloween: 9 Creepy Cartoon Capers (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/169.html
+Tue, 16 May 2023 05:03:22 GMT, 2695
+plot 2; provid 1; found 1; halloween 6; special 1; tip 1; languag 1; licens 1; creepi 6; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Tomorrow (1972)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/170.html
+Tue, 16 May 2023 05:03:22 GMT, 5980
+provid 1; douglaswilliam 1; courag 1; sarah 2; languag 1; author 1; licens 1; jackson 2; juri 1; haunt 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Funny Face (1957)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/171.html
+Tue, 16 May 2023 05:03:22 GMT, 7988
+provid 1; reject 1; lee 1; stockton 2; languag 1; septemb 1; author 1; licens 1; lauraruta 1; strain 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Jack (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/172.html
+Tue, 16 May 2023 05:03:22 GMT, 3066
+plot 2; provid 1; found 1; special 1; 1996 1; tip 1; languag 1; item 1; licens 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Devil's Brigade (1968)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/173.html
+Tue, 16 May 2023 05:03:22 GMT, 6984
+provid 1; rockmanjack 1; actual 3; ransomjeremi 1; norway 1; languag 1; suffer 1; author 1; licens 1; pictur 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Adam-12: Season 1 (1968)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/174.html
+Tue, 16 May 2023 05:03:22 GMT, 3601
+plot 2; adam-12 7; provid 1; found 1; special 1; scandal 1; english 1; mo 1; adam 7; war 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Reservoir Dogs (1992)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/175.html
+Tue, 16 May 2023 05:03:22 GMT, 11108
+provid 1; ban 1; dj 1; norway 1; 6101 1; languag 2; author 1; hear 1; licens 1; 8 3
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The History Channel Presents: Troy: Unearthing the Legend (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/176.html
+Tue, 16 May 2023 05:03:24 GMT, 2830
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Pressure (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/177.html
+Tue, 16 May 2023 05:03:24 GMT, 5923
+provid 1; produc 1; dromasca 1; desert 1; languag 2; author 1; licens 1; 8 1; omiss 1; class 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Regular Guys (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/178.html
+Tue, 16 May 2023 05:03:24 GMT, 5971
+provid 1; ziegler 1; 1996 5; languag 1; author 1; licens 1; silberandrudolf 1; omiss 1; 2 2; karinandrea 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Bollywood Bound (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/179.html
+Tue, 16 May 2023 05:03:24 GMT, 4620
+plot 4; provid 1; found 1; rubi 1; comment 5; english 1; herselfvikram 1; award 2; countri 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Scratch (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/180.html
+Tue, 16 May 2023 05:03:24 GMT, 4099
+plot 2; provid 1; found 1; special 1; watda 1; english 5; 1996 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Last Shot (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/181.html
+Tue, 16 May 2023 05:03:24 GMT, 3414
+plot 2; provid 1; found 1; special 1; english 1; tip 1; languag 1; hear 1; des 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Moby: Play (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/182.html
+Tue, 16 May 2023 05:03:24 GMT, 4803
+plot 5; provid 1; found 1; comment 5; english 1; countri 1; award 3; holland 1; tip 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+IFilm: Deranged (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/183.html
+Tue, 16 May 2023 05:03:24 GMT, 3862
+plot 2; provid 1; found 1; special 1; cleopatra 1; vom 1; stranger 1; award 8; tragedi 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Billy Blanks: Tae Bo: Cardio Circuit 1 (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/184.html
+Tue, 16 May 2023 05:03:24 GMT, 2611
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; tae 6; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Missing in Action 2: The Beginning / Missing in Action 3: Braddock (1985)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/185.html
+Tue, 16 May 2023 05:03:24 GMT, 6805
+provid 1; bomb 1; ban 2; norway 2; languag 1; author 1; licens 1; mazilli 1; tanaka 1; evil 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Panic in the Streets (1950)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/186.html
+Tue, 16 May 2023 05:03:24 GMT, 6793
+provid 1; vinc 1; tabl 1; languag 1; author 1; sustain 1; licens 1; 8 1; bubon 1; hospit 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Death to Smoochy (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/187.html
+Tue, 16 May 2023 05:03:24 GMT, 8366
+provid 1; dongcraig 1; burk 1; actual 1; apart 1; chinatown 1; norway 1; languag 2; author 1; measur 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Dead Birds (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/188.html
+Tue, 16 May 2023 05:03:24 GMT, 3975
+plot 2; stupid 1; stori 1; found 1; 1939 1; special 1; provid 1; los 2; english 2; award 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Airplane II: The Sequel (1982)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/189.html
+Tue, 16 May 2023 05:03:24 GMT, 7714
+provid 1; track--again 1; thumb 1; bomb 1; norway 1; languag 1; author 1; licens 1; aren't 1; ontario 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Blood and Sand (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/190.html
+Tue, 16 May 2023 05:03:24 GMT, 3682
+plot 2; stori 1; provid 1; found 1; flesh 4; special 1; english 4; 1996 1; tip 1; sang 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+X2: X-Men United (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/191.html
+Tue, 16 May 2023 05:03:24 GMT, 8773
+provid 1; apart 1; london 1; stryker 1; simpli 1; histor 1; norway 1; languag 2; mystiqu 1; author 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The SoulTaker (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/192.html
+Tue, 16 May 2023 05:03:24 GMT, 5077
+plot 5; yui 2; provid 1; found 1; conan 1; comment 5; english 1; countri 1; award 2; tri 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Marilyn Manson: Fear of a Satanic Planet (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/193.html
+Tue, 16 May 2023 05:03:24 GMT, 2625
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Arliss: The Best of Arliss (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/194.html
+Tue, 16 May 2023 05:03:24 GMT, 3792
+plot 2; provid 1; found 1; special 1; armstrong 1; star 1; michael 1; 1996 1; friend 1; aussi 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Chasing Freedom (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/195.html
+Tue, 16 May 2023 05:03:24 GMT, 8378
+provid 1; produc 1; freedom 9; terrorist 2; languag 1; author 1; visa 1; brent 1; 8 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Peter Tosh: Stepping Razor: Red X (1992)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/196.html
+Tue, 16 May 2023 05:03:24 GMT, 2638
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Taking Lives (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/197.html
+Tue, 16 May 2023 05:03:26 GMT, 8754
+provid 1; hoe 1; indonesia 1; medic 1; matt 1; norway 1; languag 2; author 1; creepi 4; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Gupt (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/198.html
+Tue, 16 May 2023 05:03:26 GMT, 6856
+provid 1; neelkanthsharat 1; languag 2; author 1; licens 1; listingmovi 1; omiss 1; 2 2; amaz 1; drama 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Deer Hunter (1978)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/199.html
+Tue, 16 May 2023 05:03:26 GMT, 3896
+namach 1; plot 2; the 3; provid 1; found 1; special 4; michael 1; desert 1; english 3; saeba 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Fall of the Roman Empire (1964)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/200.html
+Tue, 16 May 2023 05:03:26 GMT, 7062
+provid 1; akhenaton 1; norway 1; languag 1; author 1; licens 1; pictur 1; ferrer 1; omiss 1; 2 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Home Movie (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/201.html
+Tue, 16 May 2023 05:03:26 GMT, 6102
+plot 6; provid 1; found 1; comment 5; peden 2; aviat 1; satrinano 1; english 1; countri 1; award 3
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Ruby's Bucket of Blood (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/202.html
+Tue, 16 May 2023 05:03:26 GMT, 6495
+provid 1; bassett 1; actual 1; languag 3; author 1; licens 2; ontario 1; owner 1; passion 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sports Illustrated Swimsuit Edition: 1997 (1997)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/203.html
+Tue, 16 May 2023 05:03:26 GMT, 3412
+plot 2; 97 1; provid 1; found 1; 1995-1999 1; special 2; tip 1; model 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Venus Boyz (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/204.html
+Tue, 16 May 2023 05:03:26 GMT, 5782
+provid 1; himselfqueen 1; london 1; languag 1; author 1; licens 1; herselfdr 1; omiss 1; webber 1; bee 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Troy: Bonus Material (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/205.html
+Tue, 16 May 2023 05:03:26 GMT, 2668
+hoist 1; plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Unconstitutional: The War on Our Civil Liberties (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/206.html
+Tue, 16 May 2023 05:03:26 GMT, 7114
+provid 1; cheney 1; terrorist 2; septemb 1; languag 1; author 1; licens 1; honor 1; listingmovi 1; scari 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Denise Austin: Ultimate Fat Burner (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/207.html
+Tue, 16 May 2023 05:03:26 GMT, 2583
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Three Stooges: Sing a Song of Six Pants (1947)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/208.html
+Tue, 16 May 2023 05:03:26 GMT, 4101
+plot 2; 1939 1; stori 2; found 1; the 1; stevi 1; special 1; provid 1; english 2; 1996 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Star Trek: Deep Space Nine: Season 5 (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/209.html
+Tue, 16 May 2023 05:03:26 GMT, 3068
+plot 2; provid 1; found 1; special 1; star 13; 1996 2; tip 1; languag 1; licens 1; vg 4
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Onmyoji (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/210.html
+Tue, 16 May 2023 05:03:26 GMT, 6765
+provid 1; aforement 1; languag 1; author 1; licens 1; 8 1; rafael 1; jone 1; omiss 1; 2 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Agronomist (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/211.html
+Tue, 16 May 2023 05:03:26 GMT, 6972
+provid 2; freedom 2; languag 1; author 1; licens 1; agronomist 6; particip 1; land 1; blanco353 1; passion 4
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Querelle (1982)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/212.html
+Tue, 16 May 2023 05:03:26 GMT, 6508
+provid 1; tabl 1; schidor 1; norway 1; septemb 1; languag 1; author 1; licens 1; 8 1; bataillehanno 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Dinner Rush (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/213.html
+Tue, 16 May 2023 05:03:26 GMT, 7801
+relish 1; provid 1; italian 2; norway 1; matre'dandr 1; languag 2; author 1; licens 1; pictur 1; they'r 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Read-Along: Beauty and the Beast (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/214.html
+Tue, 16 May 2023 05:03:26 GMT, 4007
+plot 2; provid 1; found 1; special 2; panna 1; 1996 2; tip 1; te 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+That '70s Show: Season 1 (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/215.html
+Tue, 16 May 2023 05:03:26 GMT, 3705
+plot 2; provid 1; found 1; special 1; scott-heron 1; english 1; happi 1; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Impostor (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/216.html
+Tue, 16 May 2023 05:03:26 GMT, 3522
+plot 2; provid 1; found 1; belov 2; special 1; english 2; tip 1; el 9; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/217.html
+N/A, N/A
+
+
+------------------------------
+Triumph: Live at the US Festival (1983)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/218.html
+Tue, 16 May 2023 05:03:28 GMT, 3746
+plot 2; provid 1; found 1; hou 1; fall 1; special 1; michael 1; cult 2; english 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/219.html
+N/A, N/A
+
+
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/220.html
+N/A, N/A
+
+
+------------------------------
+Voyage to the Planets and Beyond (2005)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/221.html
+Tue, 16 May 2023 05:03:28 GMT, 3071
+plot 2; provid 1; found 1; special 1; 1996 1; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Yellow (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/222.html
+Tue, 16 May 2023 05:03:28 GMT, 7377
+provid 1; actual 1; lee 12; languag 2; author 1; suffer 1; licens 1; 8 1; owner 1; jone 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Chappelle's Show: Season 1 (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/223.html
+Tue, 16 May 2023 05:03:28 GMT, 7877
+provid 1; dj 1; lifetim 1; languag 1; duti 1; author 1; licens 1; virginia 1; wzup31 1; bigsbi 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/224.html
+N/A, N/A
+
+
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/225.html
+N/A, N/A
+
+
+------------------------------
+Henry: Portrait of a Serial Killer 2 (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/226.html
+Tue, 16 May 2023 05:03:28 GMT, 3516
+plot 2; provid 1; found 1; special 1; english 1; 1996 3; tip 1; languag 1; licens 1; 8 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Carol Burnett Show: Show Stoppers (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/227.html
+Tue, 16 May 2023 05:03:28 GMT, 3114
+plot 2; burnett 15; provid 1; found 1; special 2; london 1; tip 1; languag 1; licens 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Butch and Sundance: The Early Days (1979)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/228.html
+Tue, 16 May 2023 05:03:28 GMT, 6256
+provid 1; sword 1; chronicl 1; renegad 1; rettino 1; languag 1; author 1; licens 1; invent 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Peter Gabriel: Growing Up Live (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/229.html
+Tue, 16 May 2023 05:03:28 GMT, 2880
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Unsolved Mysteries: Psychics (1987)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/230.html
+Tue, 16 May 2023 05:03:28 GMT, 3104
+plot 2; provid 1; found 1; special 1; file 3; 1996 2; psychic 6; tip 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Marooned in Iraq (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/231.html
+Tue, 16 May 2023 05:03:28 GMT, 6311
+provid 1; mission 1; norway 1; languag 1; septemb 2; author 1; licens 1; omiss 1; hanareh 1; 2 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Gross Anatomy (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/232.html
+Tue, 16 May 2023 05:03:28 GMT, 6767
+provid 1; medic 1; spragg 1; languag 1; author 1; licens 1; 8 1; modin 1; mastic 1; omiss 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Chato's Land (1971)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/233.html
+Tue, 16 May 2023 05:03:28 GMT, 11167
+provid 1; 1996 1; wooden 1; simpli 1; norway 1; languag 2; author 2; hear 2; suffer 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Animation Legend: Winsor McCay (1921)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/234.html
+Tue, 16 May 2023 05:03:28 GMT, 3888
+plot 4; provid 1; comment 2; english 1; countri 1; award 3; tip 1; vaudevill 1; languag 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Unhook the Stars (1996)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/235.html
+Tue, 16 May 2023 05:03:30 GMT, 7025
+provid 1; produc 1; actual 1; desert 1; 1996 4; languag 2; hear 1; author 1; licens 1; ontario 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cartoon Crazys Sci-Fi (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/236.html
+Tue, 16 May 2023 05:03:30 GMT, 2492
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Broken Blossoms (1918)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/237.html
+Tue, 16 May 2023 05:03:30 GMT, 3769
+plot 2; seijun 1; provid 1; found 1; sword 2; special 1; english 6; rose 1; 1996 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Led Zeppelin: The Song Remains the Same (1976)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/238.html
+Tue, 16 May 2023 05:03:30 GMT, 9335
+provid 1; produc 1; cliftonjo 1; london 1; languag 1; author 1; licens 1; whole 1; aren't 1; jone 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Winnie the Pooh: Springtime with Roo (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/239.html
+Tue, 16 May 2023 05:03:30 GMT, 6829
+provid 1; languag 1; author 1; licens 1; aren't 1; listingmovi 1; sansom 1; omiss 1; 2 1; bio 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Woman of the Year (1942)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/240.html
+Tue, 16 May 2023 05:03:30 GMT, 7342
+provid 1; apart 1; languag 1; author 1; licens 1; 8 1; orphanageedith 1; kanin 1; pictur 1; petersgladi 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+North by Northwest (1959)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/241.html
+Tue, 16 May 2023 05:03:30 GMT, 9712
+ 2; provid 1; actual 1; burk 1; grip 1; riskiest 1; norway 1; languag 1; author 1; licens 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Neon Genesis Evangelion: The End of Evangelion (1995)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/242.html
+Tue, 16 May 2023 05:03:30 GMT, 8900
+keel 1; yui 2; provid 1; produc 1; unabl 1; actual 1; ban 4; 1996 1; lee 1; languag 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Pressure Point (1962)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/243.html
+Tue, 16 May 2023 05:03:30 GMT, 5973
+provid 1; medic 1; languag 1; author 1; licens 1; fatherann 1; frighten 1; pictur 1; omiss 1; ownergilbert 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Stellvia (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/244.html
+Tue, 16 May 2023 05:03:30 GMT, 5667
+plot 5; marionett 1; provid 1; found 1; mission 1; comment 5; countri 1; award 2; friend 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Road Dogz (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/245.html
+Tue, 16 May 2023 05:03:30 GMT, 6649
+ramo 3; provid 1; actual 1; languag 2; author 1; licens 1; pachecolobo 1; joerudi 1; pictur 3; knock-off 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Boston Strangler (1968)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/246.html
+Tue, 16 May 2023 05:03:30 GMT, 3904
+plot 2; provid 1; found 1; special 1; stranger 2; grip 1; tip 1; languag 1; licens 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Oleanna (1994)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/247.html
+Tue, 16 May 2023 05:03:30 GMT, 7915
+provid 1; overwhelm 1; quotestriviagoofscrazi 1; london 1; impress 1; lowenheim-skolem 1; author 2; languag 4; licens 1; hospit 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Michael Moore's The Awful Truth: Season 2 (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/248.html
+Tue, 16 May 2023 05:03:30 GMT, 2696
+plot 2; provid 1; found 1; special 1; michael 8; tip 1; languag 1; licens 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Hunters (1958)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/249.html
+Tue, 16 May 2023 05:03:30 GMT, 6093
+plot 2; sorcer 1; stori 1; found 1; flesh 1; sayad 1; file 2; lil 1; coup 1; special 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cast a Giant Shadow (1966)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/250.html
+Tue, 16 May 2023 05:03:30 GMT, 7615
+provid 1; histor 1; languag 1; author 1; 300 1; licens 1; 8 1; jackson 1; marchio 1; august 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Midsomer Murders: Strangler's Wood (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/251.html
+Tue, 16 May 2023 05:03:30 GMT, 2583
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Stuart Little 2 (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/252.html
+Tue, 16 May 2023 05:03:30 GMT, 8171
+provid 1; wick 1; zahn 2; languag 2; author 1; hear 1; licens 1; pictur 1; they'r 1; august 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/253.html
+N/A, N/A
+
+
+------------------------------
+Westender (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/254.html
+Tue, 16 May 2023 05:03:32 GMT, 6053
+provid 1; chronicl 1; languag 1; author 2; licens 1; westend 6; haunt 1; girlmaren 1; heroic 1; despit 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/255.html
+N/A, N/A
+
+
+------------------------------
+Ghost Dog: The Way of the Samurai (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/256.html
+Tue, 16 May 2023 05:03:32 GMT, 10489
+provid 3; produc 1; sword 3; apart 1; model 1; norway 1; languag 2; author 1; licens 1; aren't 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Charlotte's Web (1973)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/257.html
+Tue, 16 May 2023 05:03:32 GMT, 7637
+provid 1; charlott 12; jsandlin71 1; languag 1; septemb 1; author 1; chunkychees 1; licens 1; nicholsiwao 1; jone 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+N/A
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/258.html
+N/A, N/A
+
+
+------------------------------
+Animal (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/259.html
+Tue, 16 May 2023 05:03:32 GMT, 4576
+plot 5; stori 1; provid 1; montesluci 1; comment 2; english 1; datesmiscellan 1; countri 1; award 2; mo 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Marat / Sade (1967)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/260.html
+Tue, 16 May 2023 05:03:32 GMT, 6756
+provid 1; monsieur 2; charlott 1; simpli 1; histor 1; languag 1; author 1; licens 1; aren't 1; jackson 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Big Clock (1948)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/261.html
+Tue, 16 May 2023 05:03:32 GMT, 6735
+provid 1; produc 1; savag 1; languag 1; author 1; licens 1; pictur 1; louis 1; august 1; passion 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Herbie Rides Again (1974)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/262.html
+Tue, 16 May 2023 05:03:32 GMT, 7169
+provid 1; slatteri 1; loostgartenlarri 1; stevenson 1; languag 1; septemb 1; author 1; licens 1; mcintir 1; jone 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Dragon Ball: Tournament Saga (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/263.html
+Tue, 16 May 2023 05:03:32 GMT, 2685
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; vg 1; brows 1; episod 5
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Angelina Ballerina: Lights (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/264.html
+Tue, 16 May 2023 05:03:32 GMT, 2629
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Jeff Corwin Experience: Costa Rica and the Amazon (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/265.html
+Tue, 16 May 2023 05:03:32 GMT, 2907
+plot 2; provid 1; found 1; special 1; rica 6; corwin 7; tip 1; languag 1; licens 1; brows 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Saudade Do Futuro (2000)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/266.html
+Tue, 16 May 2023 05:03:32 GMT, 4386
+plot 5; stori 1; provid 1; retrato 1; pae 3; march 1; rodrigu 1; comment 2; english 1; countri 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Touched by an Angel: Season 1 (1994)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/267.html
+Tue, 16 May 2023 05:03:32 GMT, 3937
+jian 2; plot 2; union 1; provid 1; found 1; pian 1; hou 1; ol 1; attach 1; special 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+The Final Countdown (1980)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/268.html
+Tue, 16 May 2023 05:03:32 GMT, 3837
+plot 2; provid 1; found 1; mission 1; special 2; 1996 1; countri 1; award 5; y2k 1; tip 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Parenthood (1989)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/269.html
+Tue, 16 May 2023 05:03:32 GMT, 7631
+provid 1; languag 1; licens 2; septemb 1; author 1; ontario 1; buckmanrick 1; 646 1; pictur 1; august 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sex and the City: Season 4 (2001)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/270.html
+Tue, 16 May 2023 05:03:32 GMT, 4186
+plot 2; provid 2; found 1; special 1; mate 1; english 2; countri 5; tip 1; languag 1; 2000ce 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Saludos Amigos (1943)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/271.html
+Tue, 16 May 2023 05:03:32 GMT, 7115
+provid 1; andersen 1; lee 1; languag 1; author 1; licens 1; honor 1; pictur 1; omiss 1; reluct 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Female Yakuza Tale (1973)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/272.html
+Tue, 16 May 2023 05:03:34 GMT, 6321
+provid 1; silver 1; languag 1; author 1; licens 1; 1973 6; passion 1; omiss 1; vagina 1; 2 2
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Taxi (2004)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/273.html
+Tue, 16 May 2023 05:03:34 GMT, 10708
+provid 1; monsieur 1; cormier 1; 1996 7; el 4; languag 1; licens 1; vg 3; guan 1; 1973 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Crazy as Hell (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/274.html
+Tue, 16 May 2023 05:03:34 GMT, 6550
+provid 1; sweati 1; medic 1; bassett 1; languag 2; author 1; licens 1; hospit 3; jone 1; mcginley 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Evelyn (2002)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/275.html
+Tue, 16 May 2023 05:03:34 GMT, 8940
+provid 1; charlott 1; stephen 1; alli 1; languag 2; author 1; licens 1; aren't 1; thiev 1; bonsai 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Cold Harvest (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/276.html
+Tue, 16 May 2023 05:03:34 GMT, 5918
+provid 1; lee 1; mulholland 1; languag 1; author 1; licens 1; 8 1; haven't 1; jone 2; lesley 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Enigma: MCMXC A.D (2003)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/277.html
+Tue, 16 May 2023 05:03:34 GMT, 2464
+plot 2; provid 1; found 1; special 1; tip 1; languag 1; licens 1; brows 1; episod 5; various 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+100 Days Before the Command (1990)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/278.html
+Tue, 16 May 2023 05:03:34 GMT, 5871
+provid 1; languag 1; author 1; licens 1; depersonalis 1; belikovsergei 1; omiss 1; drama 1; ying 1; bio 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Micki and Maude (1984)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/279.html
+Tue, 16 May 2023 05:03:34 GMT, 3691
+plot 2; provid 1; found 1; ashbridg 1; star 1; special 1; belinda 1; nick 1; lee 1; perroquet 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+Sarah Brightman: In Concert (1998)
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie/280.html
+Tue, 16 May 2023 05:03:34 GMT, 3296
+plot 2; provid 1; found 1; special 1; star 1; desert 1; english 1; sarah 14; harem 2; vega 1
+https://www.cse.ust.hk/~kwtleung/COMP4321/Movie.htm
+------------------------------
+BBC news1
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc1.htm
+Tue, 16 May 2023 05:03:44 GMT, 1649
+project 3; introduc 1; england 2; red 2; uk 1; gateshead 1; late-1800 1; home-grown 1; rspb 1; breed 1
+
+------------------------------
+BBC news2
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc2.htm
+Tue, 16 May 2023 05:03:44 GMT, 2136
+comment 1; withdraw 1; histor 1; septemb 1; des 1; ensur 1; surfac 1; satellit 2; communic 1; decis 2
+
+------------------------------
+BBC news3
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/bbc3.htm
+Tue, 16 May 2023 05:03:44 GMT, 3301
+found 1; factor 1; march 1; wait 1; half-hour 1; 40 1; mullin 3; eas 1; rose 2; franci 2
+
+------------------------------
+CNN news1
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/cnn1.htm
+Tue, 16 May 2023 05:03:44 GMT, 4427
+ 1; wisconsin 1; convers 1; english 1; tri 1; entertain 1; expos 1; person 1; hear 1; sauerkraut 4
+
+------------------------------
+CNN news2
+https://www.cse.ust.hk/~kwtleung/COMP4321/news/cnn2.htm
+Tue, 16 May 2023 05:03:44 GMT, 6009
+ 3; ahead 1; environment 3; provid 1; overwhelm 2; fall 1; monday 2; al 2; drink 1; slight 1
+
+------------------------------
