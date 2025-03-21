@@ -18,7 +18,7 @@ This is the README for COMP4321 Group Project (Group 19).
 
 # Running the Spider and Generating Results
 
-The `Spider.py` script is used to crawl web pages and store the data, while `generate_spider_result.py` processes the crawled data to generate results similar to the ones in the handout. To run these scripts, ensure your virtual environment is activated. Then after navigating to project folder, use `python spider.py` to start the crawling process and `python generate_spider_result.py` to process the data. Note again that both scripts should be executed from the root directory of the project.
+The `Spider.py` script is used to crawl web pages and store the data, while `generate_spider_result.py` processes the crawled data to generate results similar to the ones in the handout. To run these scripts, ensure your virtual environment is activated. Then after navigating to project folder, use `python Spider.py` to start the crawling process and `python generate_spider_result.py` to process the data. Note again that both scripts should be executed from the root directory of the project.
 
 ---
 

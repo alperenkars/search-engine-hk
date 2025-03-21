@@ -119,7 +119,7 @@ class Spider:
         row = cursor.fetchone()
         if row:
             return row[0]
-        new_id = str(uuid.uuid4())
+        new_id = str(int(uuid.uuid4()))
         with self.db:
             self.db.execute('INSERT INTO url_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
             self.db.execute('INSERT INTO id_to_url (urlId, url) VALUES (?, ?)', (new_id, url))
