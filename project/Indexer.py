@@ -131,7 +131,7 @@ class Indexer:
 
         # if the table `body_inverted_index` not exist, create it first
         if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='body_inverted_index';").fetchone() is None:
-            self.cursor.execute(f"CREATE TABLE body_inverted_index(wordId, value);")
+            self.cursor.execute(f"CREATE TABLE body_inverted_index(wordId TEXT PRIMARY KEY, value TEXT);")
         # otherwise, retrieve all data from the DB table and put it in `self.body_inverted_index`
         else:
             result = self.cursor.execute(f"SELECT * FROM body_inverted_index;").fetchall()
@@ -155,7 +155,7 @@ class Indexer:
         
         # if the table `title_inverted_index` not exist, create it first
         if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='title_inverted_index';").fetchone() is None:
-            self.cursor.execute(f"CREATE TABLE title_inverted_index(wordId, value);")
+            self.cursor.execute(f"CREATE TABLE title_inverted_index(wordId TEXT PRIMARY KEY, value TEXT);")
         # otherwise, retrieve all data from the DB table and put it in `self.title_inverted_index`
         else:
             result = self.cursor.execute(f"SELECT * FROM title_inverted_index;").fetchall()
@@ -180,7 +180,7 @@ class Indexer:
 
         # if the table `forward_index` not exist, create it first
         if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='forward_index';").fetchone() is None:
-            self.cursor.execute(f"CREATE TABLE forward_index(urlId, value);")
+            self.cursor.execute(f"CREATE TABLE forward_index(urlId TEXT PRIMARY KEY, value TEXT);")
         # otherwise, retrieve all data from the DB table and put it in `self.forward_index`
         else:
             result = self.cursor.execute(f"SELECT * FROM forward_index;").fetchall()
@@ -192,7 +192,7 @@ class Indexer:
 
         # if the table `word_to_id` not exist, create it first
         if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='word_to_id';").fetchone() is None:
-            self.cursor.execute(f"CREATE TABLE word_to_id(word, wordId);")
+            self.cursor.execute(f"CREATE TABLE word_to_id(word TEXT PRIMARY KEY, wordId TEXT);")
         # otherwise, retrieve all data from the DB table and put it in `self.word_to_id`
         else:
             result = self.cursor.execute(f"SELECT * FROM word_to_id;").fetchall()
@@ -203,7 +203,7 @@ class Indexer:
         
         # if the table `id_to_word` not exist, create it first
         if self.cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='id_to_word';").fetchone() is None:
-            self.cursor.execute(f"CREATE TABLE id_to_word(wordId, word);")
+            self.cursor.execute(f"CREATE TABLE id_to_word(wordId TEXT PRIMARY KEY, word TEXT);")
         # otherwise, retrieve all data from the DB table and put it in `self.id_to_word`
         else:
             result = self.cursor.execute(f"SELECT * FROM id_to_word;").fetchall()
@@ -224,7 +224,7 @@ class Indexer:
         # update all the data in the table
         # commit the transaction
         self.cursor.execute(f"DROP TABLE body_inverted_index;")
-        self.cursor.execute(f"CREATE TABLE body_inverted_index(wordId, value);")
+        self.cursor.execute(f"CREATE TABLE body_inverted_index(wordId TEXT PRIMARY KEY, value TEXT);")
 
         body_inverted_index_key_value_list = []
         for (key, value) in self.body_inverted_index.items():
@@ -250,7 +250,7 @@ class Indexer:
         # update all the data in the table
         # commit the transaction
         self.cursor.execute(f"DROP TABLE title_inverted_index;")
-        self.cursor.execute(f"CREATE TABLE title_inverted_index(wordId, value);")
+        self.cursor.execute(f"CREATE TABLE title_inverted_index(wordId TEXT PRIMARY KEY, value TEXT);")
 
         title_inverted_index_key_value_list = []
         for (key, value) in self.title_inverted_index.items():
@@ -279,7 +279,7 @@ class Indexer:
         # update all the data in the table
         # commit the transaction
         self.cursor.execute(f"DROP TABLE forward_index;")
-        self.cursor.execute(f"CREATE TABLE forward_index(urlId, value);")
+        self.cursor.execute(f"CREATE TABLE forward_index(urlId TEXT PRIMARY KEY, value TEXT);")
 
         forward_index_key_value_list = []
         for (key, value) in self.forward_index.items():
@@ -299,7 +299,7 @@ class Indexer:
         # update all the data in the table
         # commit the transaction
         self.cursor.execute(f"DROP TABLE word_to_id;")
-        self.cursor.execute(f"CREATE TABLE word_to_id(word, wordId);")
+        self.cursor.execute(f"CREATE TABLE word_to_id(word TEXT PRIMARY KEY, wordId TEXT);")
         self.cursor.executemany(f"INSERT INTO word_to_id VALUES(?, ?);", list(self.word_to_id.items()))
         self.connection.commit()
 
@@ -308,7 +308,7 @@ class Indexer:
         # update all the data in the table
         # commit the transaction
         self.cursor.execute(f"DROP TABLE id_to_word;")
-        self.cursor.execute(f"CREATE TABLE id_to_word(wordId, word);")
+        self.cursor.execute(f"CREATE TABLE id_to_word(wordId TEXT PRIMARY KEY, word TEXT);")
         self.cursor.executemany(f"INSERT INTO id_to_word VALUES(?, ?);", list(self.id_to_word.items()))
         self.connection.commit()
 
