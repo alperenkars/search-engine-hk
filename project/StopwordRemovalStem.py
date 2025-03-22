@@ -23,5 +23,5 @@ class StopwordRemovalStem:
         
         noStopWordList = self.stopwordRemoval(words)
         transformedWordList = self.stemming(noStopWordList)
-
+        
         return transformedWordList
