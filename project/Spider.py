@@ -124,6 +124,7 @@ class Spider:
             self.db.execute('INSERT INTO url_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
             self.db.execute('INSERT INTO id_to_url (urlId, url) VALUES (?, ?)', (new_id, url))
             self.db.execute('INSERT INTO crawled_page_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
+            self.db.commit()
         return new_id
 
     def update_parents(self, child_id: str, parent_id: str):
@@ -151,6 +152,8 @@ class Spider:
                 self.db.execute('UPDATE id_to_children_url_id SET childrenUrlId=? WHERE urlId=?', (updated_children, parent_id))
         else:
             self.db.execute('INSERT INTO id_to_children_url_id (urlId, childrenUrlId) VALUES (?, ?)', (parent_id, child_id))
+        
+        self.db.commit()
 
      # major work is here
     def crawl(self):
@@ -199,6 +202,7 @@ class Spider:
                 # Update page size
                 self.db.execute('INSERT OR REPLACE INTO id_to_page_size (urlId, pageSize) VALUES (?, ?)',
                                 (current_url_id, page_size))
+                self.db.commit()
 
             self.visited_urls.add(current_url)
 
@@ -245,6 +249,7 @@ if __name__ == "__main__":
         indexer=indexer
     )
     spider.crawl()
+    db_connection.commit()
     db_connection.close()  # close the connection after crawling
 
 
