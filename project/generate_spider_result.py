@@ -10,12 +10,12 @@ def generate_spider_result(db_path: str, output_file: str):
     cursor = connection.cursor()
 
     with open(output_file, "w") as file:
-        # Fetch all crawled URLs
+        # first fetch all crawled URLs
         cursor.execute("SELECT urlId, url FROM id_to_url")
         urls = cursor.fetchall()
 
         for url_id, url in urls:
-            # Fetch page title, last modification date, and page size
+            # fetch page title, last modification date, and page size
             cursor.execute("SELECT pageTitle FROM id_to_page_title WHERE urlId = ?", (url_id,))
             page_title_row = cursor.fetchone()
             page_title = page_title_row[0] if page_title_row else "N/A"
@@ -28,7 +28,7 @@ def generate_spider_result(db_path: str, output_file: str):
             page_size_row = cursor.fetchone()
             page_size = page_size_row[0] if page_size_row else "N/A"
 
-            # Fetch keywords and their frequencies (up to 10)
+            # fetch keywords and their frequencies (up to 10, as specified in the handout)
             cursor.execute("SELECT value FROM forward_index WHERE urlId = ?", (url_id,))
             word_ids_row = cursor.fetchone()
             word_ids = word_ids_row[0].split()[:10] if word_ids_row else []
@@ -48,7 +48,7 @@ def generate_spider_result(db_path: str, output_file: str):
                         keywords.append(f"{word} {freq}")
                         break
 
-            # Fetch child links (up to 10)
+            # fetch child links (up to 10 again)
             cursor.execute("SELECT childrenUrlId FROM id_to_children_url_id WHERE urlId = ?", (url_id,))
             children_row = cursor.fetchone()
             child_links = []
@@ -59,7 +59,7 @@ def generate_spider_result(db_path: str, output_file: str):
                     child_url_row = cursor.fetchone()
                     child_links.append(child_url_row[0] if child_url_row else "N/A")
 
-            # Write to file
+            # write them all to file
             file.write(f"{page_title}\n")
             file.write(f"{url}\n")
             file.write(f"{last_mod_date}, {page_size}\n")
