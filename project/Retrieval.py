@@ -1,6 +1,7 @@
 # FILE: Retrieval.py
 import sqlite3
 import math
+import re
 from collections import defaultdict
 
 # look for NA issues and try with more than 300 pages!
@@ -64,8 +65,8 @@ class Retrieval:
         # load inverted indexes
         body_inverted_index = self.load_inverted_index()
         title_inverted_index = self.load_title_index()
+
         # tokenize query and handle phrases (phrase search)
-        import re
         query_terms = re.findall(r'\b\w+\b', query.lower())
 
         # test if query terms are passed correctly
