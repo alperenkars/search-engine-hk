@@ -1,10 +1,11 @@
 {% load static %}
 <html>
-    <head>
-        <title>COMP4321 Group 19 Search Engine</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-        
-        <!-- <script>
+
+<head>
+    <title>COMP4321 Group 19 Search Engine</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll(".get_similar_button, .query_history_button");
                 buttons.forEach(button => {
@@ -35,84 +36,79 @@
                 }
             });
         </script> -->
-    
-    </head>
 
-    <body class="main">
-        
-        <!-- the search logo and our search engine name -->
-        <h1 class="title">COMP4321 Group 19 Search Engine</h1>
-        
-        <!-- the search area -->
-        <form action="{% url 'index' %}" method="post" class="searchArea">
-            {% csrf_token %}
-            <input class="searchBar" id="query" name="query" type="text" placeholder="Please enter your search query.">
-            <input class="searchButton" type="submit" value="Search">
-        </form>
+</head>
 
-        <br>
+<body class="main">
 
-        <div class="container">
+    <!-- the search logo and our search engine name -->
+    <h1 class="title">COMP4321 Group 19 Search Engine</h1>
 
-            <div class="leftSidebar">
+    <!-- the search area -->
+    <form action="{% url 'index' %}" method="post" class="searchArea">
+        {% csrf_token %}
+        <input class="searchBar" id="query" name="query" type="text" placeholder="Please enter your search query.">
+        <input class="searchButton" type="submit" value="Search">
+    </form>
 
-                <h2>Query History</h2>
+    <br>
 
-                {% if query_history %}
-                    {% for history in query_history %}
-                        <div>
-                            <form method="post">
-                                {% csrf_token %}
-                                <button class="query_history_button" type="button" id="send_button" data-top5words="{{ query }}">{{ query }}</button>
-                            </form>
-                        </div>
-                    {% endfor %}
-                {% else %}
-                        <p>No query history.</p>
-                {% endif %}
+    <div class="container">
 
+        <div class="leftSidebar">
+
+            <h2>Query History</h2>
+
+            {% if query_history %}
+            {% for history in query_history %}
+            <div>
+                <form method="post">
+                    {% csrf_token %}
+                    <button class="query_history_button" type="button" id="send_button" data-top5words="{{ query }}">{{
+                        query }}</button>
+                </form>
             </div>
-
-            <div class="searchResults">
-                <h2>Search Results</h2>
-
-                {% if query_submitted %}
-                    {% for result in query_results %}
-                        <div class="searchResultItem">
-                            <p class="score">{{ result.score }}</p>
-
-                            <a href="{{ result.url }}" target="_blank">{{ result.title }}</a>
-                            <a href="{{ result.url }}" target="_blank">{{ result.url }}</a>
-
-                            <p>{{ result.last_modification_date }}, {{ result.page_size }}</p>
-
-                            {% for keyword_freq in result.keywords_frequencies %}
-                                <p>{{ keyword_freq }}</p>
-                            {% endfor %}
-
-                            <p>Parent Links:</p>
-                            {% for parent_link in result.parent_links %}
-                                <a href="{{ parent_link }}">{{ parent_link }}</a>
-                            {% endfor %}
-
-                            <p>Child Links:</p>
-                            {% for child_link in result.child_links %}
-                                <a href="{{ child_link }}">{{ child_link }}</a>
-                            {% endfor %}
-
-                            <!-- <form method="post">
-                                {% csrf_token %}
-                                <button class="get_similar_button" type="button" id="send_button" data-top5words="{{ result.top5Words }}">Get similar pages!</button>
-                            </form> -->
-
-                        </div>
-                    {% endfor %}
-                {% else %}
-                        <p>No search results.</p>
-                {% endif %}
-            </div>
+            {% endfor %}
+            {% else %}
+            <p>No query history.</p>
+            {% endif %}
 
         </div>
 
-    </body>
+        <div class="searchResults">
+            <h2>Search Results</h2>
+
+            {% if query_submitted %}
+            {% for result in query_results %}
+            <div class="searchResultItem">
+                <div class="score">
+                    {{ result.score }}
+                </div>
+                <div>
+                    {{ result.title }}<br>
+                    <a href="{{ result.url }}" target="_blank">{{ result.url }}</a><br>
+                    {{ result.last_modification_date }}, {{ result.page_size }}<br>
+                    {% for keyword_freq in result.keywords_frequencies %}
+                    {{ keyword_freq }};
+                    {% endfor %}<br>
+                    <strong>Parent Link:</strong><br>
+                    {% for parent_link in result.parent_links %}
+                    <a href="{{ parent_link }}" target="_blank">{{ parent_link }}</a><br>
+                    {% endfor %}
+                    <strong>Child Link:</strong><br>
+                    {% for child_link in result.child_links %}
+                    <a href="{{ child_link }}" target="_blank">{{ child_link }}</a><br>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No search results.</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+</body>
+
 </html>

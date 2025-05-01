@@ -220,8 +220,10 @@ if __name__ == "__main__":
     retrieval = Retrieval("main.db")
     query = 'gordon brown'
     results = retrieval.retrieve(query)
+
     for result in results:
-        print(f"""
+        """
+        print(f
         Doc ID: {result['doc_id']}, 
         Score: {result['score']},
         Title: {result['title']},
@@ -236,5 +238,7 @@ if __name__ == "__main__":
 
         Child links: 
         {"\n".join(result['child_links'])}
-        """)
+        )
+        """
         # print(f"\nDoc ID: {result['doc_id']}, \nURL: {result['url']}, \nTitle: {result['title']}, \nScore: {result['score']}")
+    

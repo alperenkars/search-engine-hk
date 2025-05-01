@@ -1,4 +1,4 @@
-.title{
+.title {
     font-size: x-large;
 }
 
@@ -21,41 +21,48 @@ h2 {
     margin-right: 10px;
     border: none;
     border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
 }
 
-.searchButton{
+.searchButton {
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color:#3efbff;
+    background-color: #3efbff;
     border: none;
+    cursor: pointer;
 }
 
-.container{
+.searchButton:hover {
+    background-color: #5bb5b7;
+}
+
+.container {
     display: flex;
 }
 
 .leftSidebar {
-    flex: 0 0 20%; 
-    background-color: lightblue; 
+    flex: 0 0 20%;
+    background-color: lightblue;
 }
 
-.query_history_button{
-    padding:10px;
-    margin:15px;
+.query_history_button {
+    padding: 10px;
+    margin: 15px;
     font-weight: bold;
-    background-color:#e66aff;
-    border:none;
+    background-color: #e66aff;
+    border: none;
 }
 
-.query_history_button:hover{
-    background-color:#e66aff6e;
-    cursor:pointer;
+.query_history_button:hover {
+    background-color: #e66aff6e;
+    cursor: pointer;
 }
 
 .searchResults {
-    flex: 0 0 80%; 
-    background-color: lightcoral; 
+    flex: 0 0 80%;
+    background-color: lightcoral;
 }
 
 .searchResultItem {
@@ -63,10 +70,13 @@ h2 {
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
-    display: grid;
     grid-template-columns: 50px auto;
+    display: flex;
+    align-items: flex-start;
 }
 
 .score {
-    grid-column-start: 1;
+    min-width: 60px;
+    font-weight: bold;
+    padding-right: 10px;
 }
