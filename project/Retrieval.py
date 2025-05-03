@@ -3,13 +3,14 @@ import sqlite3
 import math
 import re
 from collections import defaultdict
-
+from StopwordRemovalStem import StopwordRemovalStem
 
 
 class Retrieval:
     def __init__(self, db_path):
         self.conn = sqlite3.connect(db_path)
         self.cursor = self.conn.cursor()
+        self.stop_stem = StopwordRemovalStem()
 
     def load_inverted_index(self):
         self.cursor.execute("SELECT * FROM body_inverted_index;")
@@ -107,11 +108,25 @@ class Retrieval:
         query_terms = self.parse_query_with_phrases(query)
         print(f"Query terms (with phrases): {query_terms}")
 
+        # --- Stem and remove stopwords from query terms ---
+        processed_query_terms = []
+        for term in query_terms:
+            if " " in term:  # phrase
+                words = term.split()
+                processed_words = self.stop_stem.transform(words)
+                if processed_words:
+                    processed_query_terms.append(" ".join(processed_words))
+            else:
+                processed = self.stop_stem.transform([term])
+                if processed:
+                    processed_query_terms.append(processed[0])
+        print(f"Processed query terms (with phrases): {processed_query_terms}")
+
         # map query terms to word IDs based on database schema
         query_word_ids = []
         phrase_word_ids_list = []
         single_terms_set = set()
-        for term in query_terms:
+        for term in processed_query_terms:
             if " " in term:  # phrase
                 words = term.split()
                 word_ids = []
@@ -290,7 +305,7 @@ class Retrieval:
 
 if __name__ == "__main__":
     retrieval = Retrieval("main.db")
-    query = 'gordon brown'
+    query = 'the roman empire'
     results = retrieval.retrieve(query)
     for result in results:
         print(f"""
