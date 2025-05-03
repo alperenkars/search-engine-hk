@@ -19,7 +19,7 @@ h2 {
     display: block;
     width: 500px;
     margin-right: 10px;
-    border: none;
+    border: 2px solid #C0C0C0;
     border-radius: 10px;
     padding: 5px;
     padding-left: 10px;
@@ -29,13 +29,13 @@ h2 {
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color: #3efbff;
+    background-color: #c0c0c0;
     border: none;
     cursor: pointer;
 }
 
 .searchButton:hover {
-    background-color: #5bb5b7;
+    background-color: #c0c0c078;
 }
 
 .container {
@@ -43,8 +43,29 @@ h2 {
 }
 
 .leftSidebar {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.query-history-section {
     background-color: lightblue;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.query_history_button {
+    border-radius: 10px;
+}
+
+.stemmed-keywords-section {
+    background-color: lightcyan;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .query_history_button {
@@ -61,8 +82,9 @@ h2 {
 }
 
 .searchResults {
-    flex: 0 0 80%;
+    flex: 0 0 71%;
     background-color: lightcoral;
+    border-radius: 10px;
 }
 
 .searchResultItem {

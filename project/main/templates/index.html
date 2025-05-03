@@ -5,37 +5,23 @@
     <title>COMP4321 Group 19 Search Engine</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
-    <!-- <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const buttons = document.querySelectorAll(".get_similar_button, .query_history_button");
-                buttons.forEach(button => {
-                    button.addEventListener('click', function() {
-                        const top5Words = this.getAttribute('data-top5words');
-                        fetch('', {  // with the URL to handle the request
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'X-CSRFToken': getCsrfToken(this)
-                            },
-                            body: JSON.stringify({ top5Words: top5Words })
-                        })
-                        .then((response => {
-                            if (response.ok) {
-                                window.location.reload(true);  // reload the page to reflect the changes
-                            } else {
-                                throw new Error('Failed to fetch');
-                            }
-                        }))
-                        .catch(error => console.error('Error:', error));
-                    });
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll(".query_history_button");
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const query = this.getAttribute('data-top5words');
+                    const form = this.closest('form');
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'query';
+                    input.value = query;
+                    form.appendChild(input);
+                    form.submit();
                 });
-            
-                function getCsrfToken(element) {
-                    // walk up the DOM to find the closest form element and its csrf token
-                    return element.closest('form').querySelector('[name=csrfmiddlewaretoken]').value;
-                }
             });
-        </script> -->
+        });
+    </script>
 
 </head>
 
@@ -56,23 +42,42 @@
     <div class="container">
 
         <div class="leftSidebar">
+            <div class="query-history-section">
+                <h2>Query History</h2>
 
-            <h2>Query History</h2>
-
-            {% if query_history %}
-            {% for history in query_history %}
-            <div>
-                <form method="post">
-                    {% csrf_token %}
-                    <button class="query_history_button" type="button" id="send_button" data-top5words="{{ query }}">{{
-                        query }}</button>
-                </form>
+                {% if queries %}
+                {% for query in queries %}
+                <div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <button class="query_history_button" type="button" id="send_button"
+                            data-top5words="{{ query.query }}">{{ query.query }}</button>
+                    </form>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No query history.</p>
+                {% endif %}
             </div>
-            {% endfor %}
-            {% else %}
-            <p>No query history.</p>
-            {% endif %}
 
+            <div class="stemmed-keywords-section">
+                <h2>Stemmed Keywords</h2>
+
+                {% if stem_keywords %}
+                {% for keyword in stem_keywords %}
+                <div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <button class="query_history_button" type="button" id="send_button"
+                            data-top5words="{{ query }}">{{
+                            query }}</button>
+                    </form>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No stemmed keyword.</p>
+                {% endif %}
+            </div>
         </div>
 
         <div class="searchResults">
