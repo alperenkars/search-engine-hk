@@ -38,6 +38,7 @@ h2 {
 
 .material-symbols-outlined{
     display: flex;
+    justify-content: center;
     align-items: center;
     padding-right: 5px;
 }
