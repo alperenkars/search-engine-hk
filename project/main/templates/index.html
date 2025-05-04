@@ -134,6 +134,12 @@
                         {% for child_link in result.child_links %}
                         <a href="{{ child_link }}" target="_blank">{{ child_link }}</a><br>
                         {% endfor %}
+
+                        <br>
+                        <button class="getSimilarPages">
+                            <span class="material-symbols-outlined">recommend</span>
+                            Get Similar Pages!
+                        </button>
                     </div>
                 </div>
                 {% endfor %}
