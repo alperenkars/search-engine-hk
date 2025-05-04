@@ -1,3 +1,11 @@
+.main {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: whitesmoke;
+}
+
 .title {
     font-size: x-large;
 }
@@ -19,7 +27,7 @@ h2 {
     display: block;
     width: 500px;
     margin-right: 10px;
-    border: 2px solid #C0C0C0;
+    border: 2px solid lightgray;
     border-radius: 10px;
     padding: 5px;
     padding-left: 10px;
@@ -29,13 +37,15 @@ h2 {
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color: #c0c0c0;
+    background-color: lightgray;
+    opacity: 70%;
     border: none;
     cursor: pointer;
 }
 
 .searchButton:hover {
-    background-color: #c0c0c078;
+    background-color: lightgray;
+    opacity: 100%;
 }
 
 .container {
@@ -66,6 +76,7 @@ h2 {
     background-color: lightcyan;
     padding: 15px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .query_history_button {
@@ -85,6 +96,7 @@ h2 {
     flex: 0 0 71%;
     background-color: lightcoral;
     border-radius: 10px;
+    text-align: center;
 }
 
 .searchResultItem {
@@ -95,6 +107,7 @@ h2 {
     grid-template-columns: 50px auto;
     display: flex;
     align-items: flex-start;
+    text-align: start;
 }
 
 .score {

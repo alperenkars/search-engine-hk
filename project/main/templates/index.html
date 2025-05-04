@@ -5,6 +5,11 @@
     <title>COMP4321 Group 19 Search Engine</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
+    {% comment %} Use Google font called "Inter" {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll(".query_history_button");
@@ -90,16 +95,20 @@
                     {{ result.score }}
                 </div>
                 <div>
-                    {{ result.title }}<br>
+                    <strong>{{ result.title }}</strong><br>
                     <a href="{{ result.url }}" target="_blank">{{ result.url }}</a><br>
                     {{ result.last_modification_date }}, {{ result.page_size }}<br>
                     {% for keyword_freq in result.keywords_frequencies %}
                     {{ keyword_freq }};
                     {% endfor %}<br>
+
+                    <br>
                     <strong>Parent Link:</strong><br>
                     {% for parent_link in result.parent_links %}
                     <a href="{{ parent_link }}" target="_blank">{{ parent_link }}</a><br>
                     {% endfor %}
+
+                    <br>
                     <strong>Child Link:</strong><br>
                     {% for child_link in result.child_links %}
                     <a href="{{ child_link }}" target="_blank">{{ child_link }}</a><br>
