@@ -36,7 +36,7 @@ h2 {
     padding-left: 10px;
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,4 +201,80 @@ h2 {
 .getSimilarPages:hover {
     background-color: fuchsia;
     opacity: 100%;
+}
+
+/* Keyword Selection Styles */
+.keyword-search {
+    margin-bottom: 15px;
+}
+
+.keyword-search input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.keywords-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.keyword-item {
+    margin-bottom: 5px;
+}
+
+.keyword-button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.keyword-button:hover {
+    background: #e9ecef;
+}
+
+.keyword-button.selected {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+.selected-keywords {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.selected-keywords h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.selected-keyword {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.remove-keyword {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #dc3545;
+}
+
+#searchWithKeywords {
+    margin-top: 10px;
+    width: 100%;
 }

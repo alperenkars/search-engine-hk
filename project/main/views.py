@@ -18,6 +18,13 @@ def index(request):
 
     query_submitted = False
     query_results = []
+    stem_keywords = []
+
+    # Load stopwords from file
+    with open('stopwords.txt', 'r') as f:
+        stopwords = set(line.strip() for line in f)
+        
+    stem_keywords = [word for word in stopwords]
 
     if request.method == 'GET':
         cookie_id = request.COOKIES.get('user_cookie_id')
@@ -29,7 +36,11 @@ def index(request):
             # make sure each user has a unique query history
             new_query_history, created = EachUserQueryHistory.objects.get_or_create(cookie_id = str(cookie_id))
 
-            response = render(request, 'index.html', {"message": "Since this is the first time you use our search engine, we will help you to set up a new cookie.", "query_submitted": query_submitted})
+            response = render(request, 'index.html', {
+                "message": "Since this is the first time you use our search engine, we will help you to set up a new cookie.",
+                "query_submitted": query_submitted,
+                "stem_keywords": stem_keywords
+            })
             # set the max_age to be 2 years, or 63072000 seconds
             response.set_cookie('user_cookie_id', str(cookie_id), max_age=63072000)
 
@@ -40,21 +51,21 @@ def index(request):
             query_history = EachUserQueryHistory.objects.get(cookie_id = cookie_id)
             queries = UserQuery.objects.filter(history = query_history).order_by('-timestamp')[:50]
 
-            return render(request, 'index.html', {"queries": queries, "query_submitted": query_submitted})
+            return render(request, 'index.html', {
+                "queries": queries,
+                "query_submitted": query_submitted,
+                "stem_keywords": stem_keywords
+            })
         
     elif request.method == 'POST':
-
         cookie_id = request.COOKIES.get('user_cookie_id')
 
         if cookie_id:
-
             query_submitted = True
-
             query_history = EachUserQueryHistory.objects.get(cookie_id = cookie_id)
 
             if query_history.request:
                 query_submitted = True
-
                 query_strings = query_history.request_query
 
                 retrieval = Retrieval("main.db")
@@ -76,20 +87,13 @@ def index(request):
                 query_history.request_query = ""
                 query_history.save()
 
-                return render(request,"index.html", {"query_results": query_results, "queries": queries, "query_submitted": query_submitted})
+                return render(request,"index.html", {
+                    "query_results": query_results,
+                    "queries": queries,
+                    "query_submitted": query_submitted,
+                    "stem_keywords": stem_keywords
+                })
             
-            # if request.content_type == 'application/json': # check is it from get similar page button
-            #     data = json.loads(request.body)
-            #     top5Words = data.get('top5Words', '')
-            #     query_text = top5Words if top5Words else data.get('query', '')
-
-            #     user_query_history = EachUserQueryHistory.objects.get(cookie_id=cookie_id)
-            #     user_query_history.request = True
-            #     user_query_history.request_query = query_text
-            #     user_query_history.save()
-
-            #     return render(request, "index.html", {"results": results, "submitted": submitted})
-
             query_strings = request.POST.get('query', '')
 
             retrieval = Retrieval("main.db")
@@ -107,7 +111,12 @@ def index(request):
 
             queries = UserQuery.objects.filter(history = query_history).order_by('-timestamp')[:50]
 
-            return render(request, "index.html", {"query_results": query_results, "queries": queries, "query_submitted": query_submitted})
+            return render(request, "index.html", {
+                "query_results": query_results,
+                "queries": queries,
+                "query_submitted": query_submitted,
+                "stem_keywords": stem_keywords
+            })
         
         else:
             return HttpResponse("Sorry, we cannot find your cookie. Please enable your cookie.", status = 400)
