@@ -37,14 +37,14 @@ h2 {
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color: lightgray;
-    opacity: 70%;
+    background-color: greenyellow;
+    opacity: 80%;
     border: none;
     cursor: pointer;
 }
 
 .searchButton:hover {
-    background-color: lightgray;
+    background-color: greenyellow;
     opacity: 100%;
 }
 
@@ -62,18 +62,16 @@ h2 {
 }
 
 .query-history-section {
-    background-color: lightblue;
+    background-color: silver;
+    opacity: 80%;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
 }
 
-.query_history_button {
-    border-radius: 10px;
-}
-
 .stemmed-keywords-section {
-    background-color: lightcyan;
+    background-color: lightslategray;
+    opacity: 80%;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -83,24 +81,30 @@ h2 {
     padding: 10px;
     margin: 15px;
     font-weight: bold;
-    background-color: #e66aff;
+    background-color: cyan;
+    opacity: 80%;
     border: none;
+    border-radius: 10px;
 }
 
 .query_history_button:hover {
-    background-color: #e66aff6e;
+    background-color: cyan;
+    opacity: 100%;
     cursor: pointer;
 }
 
 .searchResults {
     flex: 0 0 71%;
-    background-color: lightcoral;
+    background-color: lightgray;
+    opacity: 70%;
     border-radius: 10px;
     text-align: center;
 }
 
 .searchResultItem {
-    border: 3px solid #C0C0C0;
+    border: 3px solid slategray;
+    background-color: lightgray;
+    opacity: 100%;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
@@ -108,6 +112,12 @@ h2 {
     display: flex;
     align-items: flex-start;
     text-align: start;
+}
+
+.searchResultItem:hover {
+    border: 3px solid cyan;
+    background-color: lightblue;
+    opacity: 100%;
 }
 
 .score {
