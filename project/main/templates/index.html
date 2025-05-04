@@ -5,10 +5,16 @@
     <title>COMP4321 Group 19 Search Engine</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
+    {% comment %} favicon {% endcomment %}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.svg' %}">
+
     {% comment %} Use Google font called "Inter" {% endcomment %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    {% comment %} Use Google icons {% endcomment %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -33,13 +39,18 @@
 <body class="main">
 
     <!-- the search logo and our search engine name -->
-    <h1 class="title">COMP4321 Group 19 Search Engine</h1>
+    <h1 class="title">
+        <span class="material-symbols-outlined">language</span>
+        COMP4321 Group 19 Search Engine
+    </h1>
 
     <!-- the search area -->
     <form action="{% url 'index' %}" method="post" class="searchArea">
         {% csrf_token %}
         <input class="searchBar" id="query" name="query" type="text" placeholder="Please enter your search query.">
-        <input class="searchButton" type="submit" value="Search">
+        <button class="searchButton" type="submit">
+            <span class="material-symbols-outlined">search</span> Search
+        </button>
     </form>
 
     <br>
@@ -48,7 +59,10 @@
 
         <div class="leftSidebar">
             <div class="query-history-section">
-                <h2>Query History</h2>
+                <h2 class="queryHistory">
+                    <span class="material-symbols-outlined">history</span>
+                    Query History
+                </h2>
 
                 {% if queries %}
                 {% for query in queries %}
@@ -66,7 +80,10 @@
             </div>
 
             <div class="stemmed-keywords-section">
-                <h2>Stemmed Keywords</h2>
+                <h2 class="stemmedKeywords">
+                    <span class="material-symbols-outlined">database</span>
+                    Stemmed Keywords
+                </h2>
 
                 {% if stem_keywords %}
                 {% for keyword in stem_keywords %}
@@ -86,36 +103,43 @@
         </div>
 
         <div class="searchResults">
-            <h2>Search Results</h2>
+            <h2 class="searchResultHeader">
+                <span class="material-symbols-outlined">travel_explore</span>
+                Search Results
+            </h2>
 
             {% if query_submitted %}
-            {% for result in query_results %}
-            <div class="searchResultItem">
-                <div class="score">
-                    {{ result.score }}
-                </div>
-                <div>
-                    <strong>{{ result.title }}</strong><br>
-                    <a href="{{ result.url }}" target="_blank">{{ result.url }}</a><br>
-                    {{ result.last_modification_date }}, {{ result.page_size }}<br>
-                    {% for keyword_freq in result.keywords_frequencies %}
-                    {{ keyword_freq }};
-                    {% endfor %}<br>
+                {% if query_results %}
+                {% for result in query_results %}
+                <div class="searchResultItem">
+                    <div class="score">
+                        {{ result.score }}
+                    </div>
+                    <div>
+                        <a class="resultTitle" href="{{ result.url }}" target="_blank">{{ result.title }}</a><br>
+                        <a href="{{ result.url }}" target="_blank">{{ result.url }}</a><br>
+                        <strong class="lastModDate">Last Modification Date: </strong>{{ result.last_modification_date }}, <strong class="pageSize">Page Size: </strong>{{ result.page_size }}<br>
+                        {% for keyword_freq in result.keywords_frequencies %}
+                        {{ keyword_freq }};
+                        {% endfor %}<br>
 
-                    <br>
-                    <strong>Parent Link:</strong><br>
-                    {% for parent_link in result.parent_links %}
-                    <a href="{{ parent_link }}" target="_blank">{{ parent_link }}</a><br>
-                    {% endfor %}
+                        <br>
+                        <strong class="parentLinks">Parent Links: (Showing Maximum 10 Links)</strong><br>
+                        {% for parent_link in result.parent_links %}
+                        <a href="{{ parent_link }}" target="_blank">{{ parent_link }}</a><br>
+                        {% endfor %}
 
-                    <br>
-                    <strong>Child Link:</strong><br>
-                    {% for child_link in result.child_links %}
-                    <a href="{{ child_link }}" target="_blank">{{ child_link }}</a><br>
-                    {% endfor %}
+                        <br>
+                        <strong class="childLinks">Child Links: (Showing Maximum 10 Links)</strong><br>
+                        {% for child_link in result.child_links %}
+                        <a href="{{ child_link }}" target="_blank">{{ child_link }}</a><br>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-            {% endfor %}
+                {% endfor %}
+                {% else %}
+                <p>No search results.</p>
+                {% endif %}
             {% else %}
             <p>No search results.</p>
             {% endif %}

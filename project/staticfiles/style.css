@@ -7,6 +7,9 @@
 }
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: x-large;
 }
 
@@ -33,7 +36,15 @@ h2 {
     padding-left: 10px;
 }
 
+.material-symbols-outlined{
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
 .searchButton {
+    display: flex;
+    align-items: center;
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 12px;
@@ -69,6 +80,18 @@ h2 {
     text-align: center;
 }
 
+.queryHistory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stemmedKeywords {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .stemmed-keywords-section {
     background-color: lightslategray;
     opacity: 80%;
@@ -91,6 +114,12 @@ h2 {
     background-color: cyan;
     opacity: 100%;
     cursor: pointer;
+}
+
+.searchResultHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .searchResults {
@@ -122,6 +151,35 @@ h2 {
 
 .score {
     min-width: 60px;
+    width: 25%;
     font-weight: bold;
     padding-right: 10px;
+}
+
+.resultTitle {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.resultTitle:hover {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.lastModDate {
+    font-weight: 600;
+}
+
+.pageSize {
+    font-weight: 600;
+}
+
+.parentLinks {
+    font-weight: 600;
+}
+
+.childLinks {
+    font-weight: 600;
 }
