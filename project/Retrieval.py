@@ -177,6 +177,9 @@ class Retrieval:
             # Format the output as needed
             keywords_frequencies = [f"{word} {freq}" for word, freq in top_keywords]
 
+            # BONUS feature: Get similar page using the top 5 most frequenty words of that webpage
+            top5FrequentKeywords = " ".join([word for word, _ in top_keywords])
+
 
             # get the parent links
             self.cursor.execute("SELECT parentsUrlId FROM id_to_parents_url_id WHERE urlId = ?", (doc_id,))
@@ -209,7 +212,8 @@ class Retrieval:
                             "page_size": page_size,
                             "keywords_frequencies": keywords_frequencies,
                             "parent_links": parent_links,
-                            "child_links": child_links
+                            "child_links": child_links,
+                            "top5FrequentKeywords": top5FrequentKeywords,
                             })
 
             # results.append({"doc_id": doc_id, "url": url, "title": title, "score": score})

@@ -18,17 +18,21 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const buttons = document.querySelectorAll(".query_history_button");
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const query = this.getAttribute('data-top5words');
-                    const form = this.closest('form');
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = 'query';
-                    input.value = query;
-                    form.appendChild(input);
-                    form.submit();
+            // Handle query history/stemmed keywords buttons
+            document.querySelectorAll('.query_history_button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const mainForm = document.querySelector('form.searchArea');
+                    mainForm.querySelector('#query').value = this.dataset.top5words;
+                    mainForm.submit();
+                });
+            });
+
+            // Handle "Get Similar Pages" specifically
+            document.querySelectorAll('.getSimilarPages').forEach(button => {
+                button.addEventListener('click', function() {
+                    const mainForm = document.querySelector('form.searchArea');
+                    mainForm.querySelector('#query').value = this.dataset.top5words;
+                    mainForm.submit();
                 });
             });
         });
@@ -136,10 +140,17 @@
                         {% endfor %}
 
                         <br>
-                        <button class="getSimilarPages">
-                            <span class="material-symbols-outlined">recommend</span>
-                            Get Similar Pages!
-                        </button>
+                        <div>
+                            <form method="post">
+                            {% csrf_token %}
+                                <button class="getSimilarPages" type="button" id="send_button" data-top5words="{{ result.top5FrequentKeywords }}">
+                                    <span class="material-symbols-outlined">recommend</span>
+                                    Get Similar Pages!
+                                </button>
+                            </form>
+                        </div>
+
+                        
                     </div>
                 </div>
                 {% endfor %}
