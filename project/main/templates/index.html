@@ -106,6 +106,24 @@
                     mainForm.submit();
                 }
             });
+
+            // Handle Load More Keywords button
+            const loadMoreBtn = document.getElementById('loadMoreKeywords');
+            if (loadMoreBtn) {
+                let visibleCount = 50;
+                loadMoreBtn.addEventListener('click', function () {
+                    const hiddenKeywords = document.querySelectorAll('.hidden-keyword');
+                    const nextBatch = Math.min(50, hiddenKeywords.length);
+
+                    for (let i = 0; i < nextBatch; i++) {
+                        hiddenKeywords[i].classList.remove('hidden-keyword');
+                    }
+
+                    if (nextBatch >= hiddenKeywords.length) {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
 
@@ -178,7 +196,7 @@
                 <div class="keywords-list">
                     {% if stem_keywords %}
                     {% for keyword in stem_keywords %}
-                    <div class="keyword-item">
+                    <div class="keyword-item {% if forloop.counter > 50 %}hidden-keyword{% endif %}">
                         <form method="post">
                             {% csrf_token %}
                             <button class="keyword-button" type="button" data-keyword="{{ keyword }}">
@@ -187,6 +205,12 @@
                         </form>
                     </div>
                     {% endfor %}
+                    {% if stem_keywords|length > 50 %}
+                    <button id="loadMoreKeywords" class="load-more-button">
+                        <span class="material-symbols-outlined">expand_more</span>
+                        Load More Keywords
+                    </button>
+                    {% endif %}
                     {% else %}
                     <p>No stemmed keywords available.</p>
                     {% endif %}
