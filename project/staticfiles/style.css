@@ -87,6 +87,16 @@ h2 {
     align-items: center;
 }
 
+.query_history_list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.query_history_item {
+    margin-bottom: 5px;
+}
+
 .stemmedKeywords {
     display: flex;
     justify-content: center;
@@ -103,16 +113,17 @@ h2 {
 
 .query_history_button {
     padding: 10px;
-    margin: 15px;
-    font-weight: bold;
-    background-color: cyan;
-    opacity: 80%;
+    /* font-weight: bold; */
+    background-color: white;
+    opacity: 90%;
     border: none;
     border-radius: 10px;
+    width: 100%;
+    text-align: left;
 }
 
 .query_history_button:hover {
-    background-color: cyan;
+    background-color: white;
     opacity: 100%;
     cursor: pointer;
 }
@@ -212,7 +223,7 @@ h2 {
     width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .keywords-list {
@@ -229,15 +240,17 @@ h2 {
     width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
-    background: #f8f9fa;
-    border-radius: 4px;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 10px;
     cursor: pointer;
     text-align: left;
     transition: all 0.2s;
 }
 
 .keyword-button:hover {
-    background: #e9ecef;
+    background-color: white;
+    opacity: 100%;
 }
 
 .keyword-button.selected {
@@ -261,7 +274,7 @@ h2 {
 
 .selected-keyword {
     display: inline-block;
-    background: #e9ecef;
+    background: lightgray;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 15px;

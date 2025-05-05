@@ -138,20 +138,23 @@
                     <span class="material-symbols-outlined">history</span>
                     Query History
                 </h2>
-
-                {% if queries %}
-                {% for query in queries %}
-                <div>
-                    <form method="post">
-                        {% csrf_token %}
-                        <button class="query_history_button" type="button" id="send_button"
-                            data-top5words="{{ query.query }}">{{ query.query }}</button>
-                    </form>
+            
+                <div class="query_history_list">
+                    {% if queries %}
+                    {% for query in queries %}
+                    <div class="query_history_item">
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="query_history_button" type="button" id="send_button"
+                                data-top5words="{{ query.query }}">{{ query.query }}</button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <p>No query history.</p>
+                    {% endif %}
                 </div>
-                {% endfor %}
-                {% else %}
-                <p>No query history.</p>
-                {% endif %}
+
             </div>
 
             <div class="stemmed-keywords-section">
