@@ -19,9 +19,11 @@ def index(request):
     query_submitted = False
     query_results = []
     stem_keywords = []
-    
-    retrieval = Retrieval("main.db")
-    stem_keywords = [word for word in retrieval.get_all_keywords() if word is not '']
+
+    # Load stopwords from file
+    with open('stopwords.txt', 'r') as f:
+        stopwords = set(line.strip() for line in f)
+    stem_keywords = [word for word in stopwords]
 
     if request.method == 'GET':
         cookie_id = request.COOKIES.get('user_cookie_id')
@@ -117,3 +119,18 @@ def index(request):
         
         else:
             return HttpResponse("Sorry, we cannot find your cookie. Please enable your cookie.", status = 400)
+
+@csrf_protect
+def clear_history(request):
+    if request.method == 'POST':
+        cookie_id = request.COOKIES.get('user_cookie_id')
+        if cookie_id:
+            try:
+                query_history = EachUserQueryHistory.objects.get(cookie_id=cookie_id)
+                UserQuery.objects.filter(history=query_history).delete()
+                return redirect('index')
+            except EachUserQueryHistory.DoesNotExist:
+                return HttpResponse("Query history not found.", status=404)
+        else:
+            return HttpResponse("Cookie not found.", status=400)
+    return HttpResponse("Method not allowed.", status=405)

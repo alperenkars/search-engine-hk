@@ -138,7 +138,7 @@
                     <span class="material-symbols-outlined">history</span>
                     Query History
                 </h2>
-            
+
                 <div class="query_history_list">
                     {% if queries %}
                     {% for query in queries %}
@@ -154,6 +154,14 @@
                     <p>No query history.</p>
                     {% endif %}
                 </div>
+
+                <form method="post" action="{% url 'clear_history' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="clear-history-button">
+                        <span class="material-symbols-outlined">delete</span>
+                        Clear History
+                    </button>
+                </form>
 
             </div>
 

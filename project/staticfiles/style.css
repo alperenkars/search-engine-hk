@@ -129,6 +129,29 @@ h2 {
     cursor: pointer;
 }
 
+.clear-history-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+.clear-history-button:hover {
+    opacity: 0.9;
+}
+
+.clear-history-button .material-symbols-outlined {
+    margin-right: 5px;
+}
+
 .searchResultHeader {
     display: flex;
     justify-content: center;
