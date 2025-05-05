@@ -19,12 +19,9 @@ def index(request):
     query_submitted = False
     query_results = []
     stem_keywords = []
-
-    # Load stopwords from file
-    with open('stopwords.txt', 'r') as f:
-        stopwords = set(line.strip() for line in f)
-        
-    stem_keywords = [word for word in stopwords]
+    
+    retrieval = Retrieval("main.db")
+    stem_keywords = [word for word in retrieval.get_all_keywords() if word is not '']
 
     if request.method == 'GET':
         cookie_id = request.COOKIES.get('user_cookie_id')

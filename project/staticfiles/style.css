@@ -45,6 +45,7 @@ h2 {
 
 .searchButton {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 16px;
     padding: 10px 20px;
@@ -65,7 +66,7 @@ h2 {
 }
 
 .leftSidebar {
-    flex: 0 0 25%;
+    flex: 32%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -135,7 +136,7 @@ h2 {
 }
 
 .searchResults {
-    flex: 0 0 71%;
+    flex: 68%;
     background-color: lightgray;
     opacity: 70%;
     border-radius: 10px;

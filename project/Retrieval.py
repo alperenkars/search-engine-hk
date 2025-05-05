@@ -219,6 +219,15 @@ class Retrieval:
             # results.append({"doc_id": doc_id, "url": url, "title": title, "score": score})
 
         return results
+    
+    # For BONUS: allows user to query the stemmed words from database
+    def get_all_keywords(self):
+        self.cursor.execute("SELECT word FROM word_to_id;")
+        rows = self.cursor.fetchall()
+
+        all_keywords = [row[0] for row in rows]
+
+        return all_keywords
 
 if __name__ == "__main__":
     retrieval = Retrieval("main.db")
