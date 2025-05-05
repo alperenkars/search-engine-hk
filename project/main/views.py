@@ -8,14 +8,23 @@ import json
 from Retrieval import Retrieval
 from django.urls import reverse
 from django.shortcuts import redirect
+from django.core.cache import cache
 # from django.http import HttpResponse
 
 # Create your views here.
 
 def get_stemmed_keywords():
-    """Get all stemmed keywords from the database."""
+    """Get all stemmed keywords from the database with caching."""
+    # Try to get keywords from cache first
+    cached_keywords = cache.get('stemmed_keywords')
+    if cached_keywords is not None:
+        return cached_keywords
+    
+    # If not in cache, fetch from database and cache the result
     retrieval = Retrieval("main.db")
-    return [word for word in retrieval.get_all_keywords() if word != '']
+    keywords = [word for word in retrieval.get_all_keywords() if word != '']
+    cache.set('stemmed_keywords', keywords, timeout=3600)  # Cache for 1 hour
+    return keywords
 
 def get_user_query_history(cookie_id):
     """Get query history for a specific user."""
