@@ -41,8 +41,12 @@ class Retrieval:
         return title_inverted_index
 
     def calculate_tfxidf(self, term_frequency, max_tf, doc_count, total_docs):
+        # Skip terms where doc_count is 0 to avoid division by zero
+        if doc_count == 0:
+            return 0
+        
         tf = term_frequency / max_tf
-        idf = math.log2(total_docs / (1 + doc_count))
+        idf = math.log2(total_docs / doc_count)  # Removed the +1
         return tf * idf
 
     def cosine_similarity(self, query_vector, doc_vector):
@@ -218,55 +222,45 @@ class Retrieval:
             # get the page title
             self.cursor.execute("SELECT pageTitle FROM id_to_page_title WHERE urlId = ?", (doc_id,))
             title_row = self.cursor.fetchone()
-            title = title_row[0] if title_row else "N/A"
+            title = title_row[0] if title_row else None
 
             # get the page URL
             self.cursor.execute("SELECT url FROM id_to_url WHERE urlId = ?", (doc_id,))
             url_row = self.cursor.fetchone()
-            url = url_row[0] if url_row else "N/A"
+            url = url_row[0] if url_row else None
 
             # get the last modification date
             self.cursor.execute("SELECT lastModificationDate FROM id_to_last_modification_date WHERE urlId = ?", (doc_id,))
             last_modification_date_row = self.cursor.fetchone()
-            last_modification_date = last_modification_date_row[0] if last_modification_date_row else "N/A"
+            last_modification_date = last_modification_date_row[0] if last_modification_date_row else None
 
             # get the size of the page
             self.cursor.execute("SELECT pageSize FROM id_to_page_size WHERE urlId = ?", (doc_id,))
             page_size_row = self.cursor.fetchone()
-            page_size = page_size_row[0] if page_size_row else "N/A"
+            page_size = page_size_row[0] if page_size_row else None
+
+            # if URL or title or other critical info is missing, skip this result
+            if not url:
+                continue
 
             # get the keyword frequency pairs (get the top 5 most frequent stemmed keywords)
-            self.cursor.execute("SELECT value FROM forward_index WHERE urlId = ?", (doc_id,))
-            word_ids_row = self.cursor.fetchone()
-            word_ids = word_ids_row[0].split()[:10] if word_ids_row else []
-
             frequency_dict = {}
-
-            for word_id in word_ids:
-                self.cursor.execute("SELECT word FROM id_to_word WHERE wordId = ?", (word_id,))
-                word_row = self.cursor.fetchone()
-                word = word_row[0] if word_row else "N/A"
-
-                self.cursor.execute("SELECT value FROM body_inverted_index WHERE wordId = ?", (word_id,))
-                body_data_row = self.cursor.fetchone()
-                body_data = body_data_row[0] if body_data_row else ""
-
-                for entry in body_data.split():
-                    entry_url_id, freq, _ = entry.split(";")
-                    if entry_url_id == doc_id:
-                        # Update the frequency in the dictionary
-                        frequency_dict[word] = frequency_dict.get(word, 0) + int(freq)
-                        break
+            # Iterate over all word IDs in the body_inverted_index
+            for word_id, postings in body_inverted_index.items():
+                if doc_id in postings:
+                    freq = postings[doc_id]["frequency"]
+                    self.cursor.execute("SELECT word FROM id_to_word WHERE wordId = ?", (word_id,))
+                    word_row = self.cursor.fetchone()
+                    word = word_row[0] if word_row else "N/A"
+                    if word and word != "N/A":
+                        frequency_dict[word] = freq
 
             # Sort the dictionary by frequency and get the top 5
             top_keywords = sorted(frequency_dict.items(), key=lambda item: item[1], reverse=True)[:5]
 
             # Format the output as needed
             keywords_frequencies = [f"{word} {freq}" for word, freq in top_keywords]
-
-            # BONUS feature: Get similar page using the top 5 most frequenty words of that webpage
-            top5FrequentKeywords = " ".join([word for word, _ in top_keywords])
-
+            top5FrequentKeywords = " ".join([word for word, _ in top_keywords if word])
 
             # get the parent links
             self.cursor.execute("SELECT parentsUrlId FROM id_to_parents_url_id WHERE urlId = ?", (doc_id,))
@@ -293,17 +287,15 @@ class Retrieval:
 
             results.append({"doc_id": doc_id,
                             "score": score,
-                            "title": title,
+                            "title": title if title else "(No Title)",
                             "url": url,
-                            "last_modification_date": last_modification_date,
-                            "page_size": page_size,
+                            "last_modification_date": last_modification_date if last_modification_date else "(No Date)",
+                            "page_size": page_size if page_size else "(No Size)",
                             "keywords_frequencies": keywords_frequencies,
                             "parent_links": parent_links,
                             "child_links": child_links,
                             "top5FrequentKeywords": top5FrequentKeywords,
                             })
-
-            # results.append({"doc_id": doc_id, "url": url, "title": title, "score": score})
 
         return results
     
@@ -341,4 +333,3 @@ if __name__ == "__main__":
         )
         """
         # print(f"\nDoc ID: {result['doc_id']}, \nURL: {result['url']}, \nTitle: {result['title']}, \nScore: {result['score']}")
-    
