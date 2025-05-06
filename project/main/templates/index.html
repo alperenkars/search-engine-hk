@@ -1,0 +1,291 @@
+{% load static %}
+<html>
+
+<head>
+    <title>COMP4321 Group 19 Search Engine</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    {% comment %} favicon {% endcomment %}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.svg' %}">
+
+    {% comment %} Use Google font called "Inter" {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    {% comment %} Use Google icons {% endcomment %}
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle query history/stemmed keywords buttons
+            document.querySelectorAll('.query_history_button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const mainForm = document.querySelector('form.searchArea');
+                    mainForm.querySelector('#query').value = this.dataset.top5words;
+                    mainForm.submit();
+                });
+            });
+
+            // Handle "Get Similar Pages" specifically
+            document.querySelectorAll('.getSimilarPages').forEach(button => {
+                button.addEventListener('click', function () {
+                    const mainForm = document.querySelector('form.searchArea');
+                    mainForm.querySelector('#query').value = this.dataset.top5words;
+                    mainForm.submit();
+                });
+            });
+
+            // Handle keyword search
+            const keywordSearch = document.getElementById('keywordSearch');
+            const keywordsList = document.querySelector('.keywords-list');
+            const selectedKeywordsList = document.getElementById('selectedKeywordsList');
+            const searchWithKeywordsBtn = document.getElementById('searchWithKeywords');
+            const selectedKeywords = new Set();
+
+            // Filter keywords based on search input
+            keywordSearch.addEventListener('input', function () {
+                const searchTerm = this.value.toLowerCase();
+                const keywordItems = keywordsList.querySelectorAll('.keyword-item');
+
+                keywordItems.forEach(item => {
+                    const keyword = item.querySelector('.keyword-button').textContent.toLowerCase();
+                    item.style.display = keyword.includes(searchTerm) ? 'block' : 'none';
+                });
+            });
+
+            // Handle keyword selection
+            document.querySelectorAll('.keyword-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const keyword = this.dataset.keyword;
+
+                    if (selectedKeywords.has(keyword)) {
+                        selectedKeywords.delete(keyword);
+                        this.classList.remove('selected');
+                    } else {
+                        selectedKeywords.add(keyword);
+                        this.classList.add('selected');
+                    }
+
+                    updateSelectedKeywordsList();
+                });
+            });
+
+            // Update the selected keywords list display
+            function updateSelectedKeywordsList() {
+                selectedKeywordsList.innerHTML = '';
+                selectedKeywords.forEach(keyword => {
+                    const keywordElement = document.createElement('div');
+                    keywordElement.className = 'selected-keyword';
+                    keywordElement.innerHTML = `
+                        ${keyword}
+                        <span class="remove-keyword" data-keyword="${keyword}">×</span>
+                    `;
+                    selectedKeywordsList.appendChild(keywordElement);
+                });
+
+                // Add remove functionality
+                document.querySelectorAll('.remove-keyword').forEach(removeBtn => {
+                    removeBtn.addEventListener('click', function () {
+                        const keyword = this.dataset.keyword;
+                        selectedKeywords.delete(keyword);
+                        updateSelectedKeywordsList();
+                        document.querySelector(`.keyword-button[data-keyword="${keyword}"]`).classList.remove('selected');
+                    });
+                });
+            }
+
+            // Handle search with selected keywords
+            searchWithKeywordsBtn.addEventListener('click', function () {
+                if (selectedKeywords.size > 0) {
+                    const mainForm = document.querySelector('form.searchArea');
+                    mainForm.querySelector('#query').value = Array.from(selectedKeywords).join(' ');
+                    mainForm.submit();
+                }
+            });
+
+            // Handle Load More Keywords button
+            const loadMoreBtn = document.getElementById('loadMoreKeywords');
+            if (loadMoreBtn) {
+                let visibleCount = 50;
+                loadMoreBtn.addEventListener('click', function () {
+                    const hiddenKeywords = document.querySelectorAll('.hidden-keyword');
+                    const nextBatch = Math.min(50, hiddenKeywords.length);
+
+                    for (let i = 0; i < nextBatch; i++) {
+                        hiddenKeywords[i].classList.remove('hidden-keyword');
+                    }
+
+                    if (nextBatch >= hiddenKeywords.length) {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+
+</head>
+
+<body class="main">
+
+    <!-- the search logo and our search engine name -->
+    <h1 class="title">
+        <span class="material-symbols-outlined">language</span>
+        COMP4321 Group 19 Search Engine
+    </h1>
+
+    <!-- the search area -->
+    <form action="{% url 'index' %}" method="post" class="searchArea">
+        {% csrf_token %}
+        <input class="searchBar" id="query" name="query" type="text" placeholder="Please enter your search query.">
+        <button class="searchButton" type="submit">
+            <span class="material-symbols-outlined">search</span> Search
+        </button>
+    </form>
+
+    <br>
+
+    <div class="container">
+
+        <div class="leftSidebar">
+            <div class="query-history-section">
+                <h2 class="queryHistory">
+                    <span class="material-symbols-outlined">history</span>
+                    Query History
+                </h2>
+
+                <div class="query_history_list">
+                    {% if queries %}
+                    {% for query in queries %}
+                    <div class="query_history_item">
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="query_history_button" type="button" id="send_button"
+                                data-top5words="{{ query.query }}">{{ query.query }}</button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <p>No query history.</p>
+                    {% endif %}
+                </div>
+
+                <form method="post" action="{% url 'clear_history' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="clear-history-button">
+                        <span class="material-symbols-outlined">delete</span>
+                        Clear History
+                    </button>
+                </form>
+
+            </div>
+
+            <div class="stemmed-keywords-section">
+                <h2 class="stemmedKeywords">
+                    <span class="material-symbols-outlined">database</span>
+                    Stemmed Keywords
+                </h2>
+
+                <div class="keyword-search">
+                    <input type="text" id="keywordSearch" placeholder="Search keywords..." class="searchBar">
+                </div>
+
+                <div class="keywords-list">
+                    {% if stem_keywords %}
+                    {% for keyword in stem_keywords %}
+                    <div class="keyword-item {% if forloop.counter > 50 %}hidden-keyword{% endif %}">
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="keyword-button" type="button" data-keyword="{{ keyword }}">
+                                {{ keyword }}
+                            </button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                    {% if stem_keywords|length > 50 %}
+                    <button id="loadMoreKeywords" class="load-more-button">
+                        <span class="material-symbols-outlined">expand_more</span>
+                        Load More Keywords
+                    </button>
+                    {% endif %}
+                    {% else %}
+                    <p>No stemmed keywords available.</p>
+                    {% endif %}
+                </div>
+
+                <div class="selected-keywords">
+                    <h3>Selected Keywords:</h3>
+                    <div id="selectedKeywordsList"></div>
+                    <button id="searchWithKeywords" class="searchButton" type="button">
+                        <span class="material-symbols-outlined">search</span> Search with Selected Keywords
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchResults">
+            <h2 class="searchResultHeader">
+                <span class="material-symbols-outlined">travel_explore</span>
+                Search Results
+            </h2>
+
+            {% if query_submitted %}
+            {% if query_results %}
+            {% for result in query_results %}
+            <div class="searchResultItem">
+                <div class="score">
+                    {{ result.score }}
+                </div>
+                <div>
+                    <a class="resultTitle" href="{{ result.url }}" target="_blank">{{ result.title }}</a><br>
+                    <a href="{{ result.url }}" target="_blank">{{ result.url }}</a><br>
+                    <strong class="lastModDate">Last Modification Date: </strong>{{ result.last_modification_date }},
+                    <strong class="pageSize">Page Size: </strong>{{ result.page_size }}<br>
+                    {% for keyword_freq in result.keywords_frequencies %}
+                    {{ keyword_freq }};
+                    {% endfor %}<br>
+
+                    <br>
+                    <strong class="parentLinks">Parent Links: (Showing Maximum 10 Links)</strong><br>
+                    {% for parent_link in result.parent_links %}
+                    <a href="{{ parent_link }}" target="_blank">{{ parent_link }}</a><br>
+                    {% endfor %}
+
+                    <br>
+                    <strong class="childLinks">Child Links: (Showing Maximum 10 Links)</strong><br>
+                    {% for child_link in result.child_links %}
+                    <a href="{{ child_link }}" target="_blank">{{ child_link }}</a><br>
+                    {% endfor %}
+
+                    <br>
+                    <div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="getSimilarPages" type="button" id="send_button"
+                                data-top5words="{{ result.top5FrequentKeywords }}">
+                                <span class="material-symbols-outlined">recommend</span>
+                                Get Similar Pages!
+                            </button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No search results.</p>
+            {% endif %}
+            {% else %}
+            <p>No search results.</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+</body>
+
+</html>
