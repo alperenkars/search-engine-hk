@@ -41,7 +41,7 @@ class Retrieval:
         return title_inverted_index
 
     def calculate_tfxidf(self, term_frequency, max_tf, doc_count, total_docs):
-        # Skip terms where doc_count is 0 to avoid division by zero
+        # skip terms where doc_count is 0 to avoid division by zero (according to TA answer)
         if doc_count == 0:
             return 0
         
@@ -74,20 +74,20 @@ class Retrieval:
         """
         if not phrase_word_ids:
             return set()
-        # Get postings for each word in the phrase
+        #get postings for each word in the phrase
         postings_lists = []
         for wid in phrase_word_ids:
             postings = inverted_index.get(wid, {})
             postings_lists.append(postings)
-        # Find common doc_ids
+        # find common doc_ids
         common_doc_ids = set(postings_lists[0].keys())
         for postings in postings_lists[1:]:
             common_doc_ids &= set(postings.keys())
         result_docs = set()
         for doc_id in common_doc_ids:
-            # Get positions for each word in this doc
+            # get positions for each word in this doc
             positions_lists = [postings[doc_id]["positions"] for postings in postings_lists]
-            # For the first word, check if there is a sequence of positions for the phrase
+            # for the first word, check if there is a sequence of positions for the phrase
             first_positions = positions_lists[0]
             for pos in first_positions:
                 match = True
@@ -112,7 +112,7 @@ class Retrieval:
         query_terms = self.parse_query_with_phrases(query)
         print(f"Query terms (with phrases): {query_terms}")
 
-        # --- Stem and remove stopwords from query terms ---
+        # stem and remove stopwords from query terms
         processed_query_terms = []
         for term in query_terms:
             if " " in term:  # phrase
@@ -139,7 +139,7 @@ class Retrieval:
                     row = self.cursor.fetchone()
                     if row:
                         word_ids.append(row[0])
-                        # Add each word in phrase as a single term if not already present
+                        # ad each word in phrase as a single term if not already present
                         if w not in single_terms_set:
                             single_terms_set.add(w)
                 if word_ids:
@@ -245,20 +245,21 @@ class Retrieval:
 
             # get the keyword frequency pairs (get the top 5 most frequent stemmed keywords)
             frequency_dict = {}
-            # Iterate over all word IDs in the body_inverted_index
+            # iterate over all word IDs in the body_inverted_index
             for word_id, postings in body_inverted_index.items():
                 if doc_id in postings:
                     freq = postings[doc_id]["frequency"]
                     self.cursor.execute("SELECT word FROM id_to_word WHERE wordId = ?", (word_id,))
                     word_row = self.cursor.fetchone()
                     word = word_row[0] if word_row else "N/A"
-                    if word and word != "N/A":
+                    # only consider words - alphabetic (filter out numbers)
+                    if word and word != "N/A" and word.isalpha():
                         frequency_dict[word] = freq
 
-            # Sort the dictionary by frequency and get the top 5
+            # sort the dictionary by frequency and get the top 5
             top_keywords = sorted(frequency_dict.items(), key=lambda item: item[1], reverse=True)[:5]
 
-            # Format the output as needed
+            # format the output as needed
             keywords_frequencies = [f"{word} {freq}" for word, freq in top_keywords]
             top5FrequentKeywords = " ".join([word for word, _ in top_keywords if word])
 
