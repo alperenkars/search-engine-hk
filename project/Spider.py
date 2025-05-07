@@ -119,7 +119,16 @@ class Spider:
     async def fetch_page(self, session, url: str):
         try:
             async with session.get(url) as response:
-                text = await response.text()
+                try:
+                    # try normally decode first 
+                    text = await response.text()
+                except UnicodeDecodeError:
+                    # if error, read the raw bytes and try latin1 decoding
+                    raw = await response.read()
+                    try:
+                        text = raw.decode('latin1')
+                    except Exception:
+                        text = raw.decode('utf-8', errors='replace')
                 headers = dict(response.headers)
                 return type('Response', (), {'text': text, 'headers': headers, 'url': url})
         except Exception as e:
