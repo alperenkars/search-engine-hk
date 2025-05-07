@@ -8,7 +8,11 @@ import time
 from Indexer import Indexer
 import re
 from ContentExtractor import ContentExtractor
-from StopwordRemovalStem import StopwordRemovalStem # Import StopwordRemovalStem class
+from StopwordRemovalStem import StopwordRemovalStem  # Import StopwordRemovalStem class
+
+import asyncio
+import aiohttp
+from asyncio import Queue
 
 
 """ NOTES """
@@ -19,18 +23,16 @@ from StopwordRemovalStem import StopwordRemovalStem # Import StopwordRemovalStem
 """
 
 
-
 class Spider:
     def __init__(self, start_url: str, max_pages: int, db_connection: sqlite3.Connection, indexer: Indexer):
         self.start_url = start_url
         self.max_pages = max_pages
 
         self.visited_urls = set()
-        self.url_queue = deque([start_url])
         self.enqueued_urls = set([start_url])
 
         # instead of connecting to database, we pass the connection to the spider to avoid database access conflicts
-        self.db = db_connection  
+        self.db = db_connection
 
         # enabling foreign key constraints allows updates to database without conflicts
         self.db.execute("PRAGMA foreign_keys = ON;")
@@ -39,6 +41,8 @@ class Spider:
         self.extractor = ContentExtractor()
         self.stop_stem = StopwordRemovalStem()  # stopword removal and stemming part
         self.create_spider_tables()
+
+        self.db.commit()
 
     def create_spider_tables(self):
         with self.db:
@@ -99,14 +103,42 @@ class Spider:
                 )
             ''')
 
-     # fetch the page from given url and return the response
-    def fetch_page(self, url: str):
+        self.db.commit()
+
+    def clear_spider_tables(self):
+         # to see the results clearly
+        with self.db:
+            self.db.execute("DELETE FROM url_to_id")
+            self.db.execute("DELETE FROM id_to_url")
+            self.db.execute("DELETE FROM crawled_page_to_id")
+            self.db.execute("DELETE FROM id_to_page_title")
+            self.db.execute("DELETE FROM id_to_last_modification_date")
+            self.db.execute("DELETE FROM id_to_page_size")
+            self.db.execute("DELETE FROM id_to_children_url_id")
+            self.db.execute("DELETE FROM id_to_parents_url_id")
+
+        self.db.commit()
+
+        # also clear indexer tables 
+        self.indexer.prepareSQLiteDB()
+        self.indexer.updateSQLiteDB()
+
+    async def fetch_page(self, session, url: str):
         try:
-            # response = requests.get(url, timeout=10) # set timeout be 10 seconds
-            response = requests.get(url) # set time out to be infinitely long
-            response.raise_for_status()
-            return response
-        except requests.RequestException as e:
+            async with session.get(url) as response:
+                try:
+                    # try normally decode first 
+                    text = await response.text()
+                except UnicodeDecodeError:
+                    # if error, read the raw bytes and try latin1 decoding
+                    raw = await response.read()
+                    try:
+                        text = raw.decode('latin1')
+                    except Exception:
+                        text = raw.decode('utf-8', errors='replace')
+                headers = dict(response.headers)
+                return type('Response', (), {'text': text, 'headers': headers, 'url': url})
+        except Exception as e:
             print(f"Failed to fetch {url}: {e}")
             return None
 
@@ -124,7 +156,9 @@ class Spider:
             self.db.execute('INSERT INTO url_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
             self.db.execute('INSERT INTO id_to_url (urlId, url) VALUES (?, ?)', (new_id, url))
             self.db.execute('INSERT INTO crawled_page_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
-            self.db.commit()
+        
+        self.db.commit()
+
         return new_id
 
     def update_parents(self, child_id: str, parent_id: str):
@@ -141,6 +175,8 @@ class Spider:
                 self.db.execute('UPDATE id_to_parents_url_id SET parentsUrlId=? WHERE urlId=?', (updated_parents, child_id))
         else:
             self.db.execute('INSERT INTO id_to_parents_url_id (urlId, parentsUrlId) VALUES (?, ?)', (child_id, parent_id))
+        
+        self.db.commit()
 
         # update parent => children now
         cursor = self.db.execute('SELECT childrenUrlId FROM id_to_children_url_id WHERE urlId = ?', (parent_id,))
@@ -155,71 +191,105 @@ class Spider:
         
         self.db.commit()
 
-     # major work is here
-    def crawl(self):
-        while self.url_queue and len(self.visited_urls) < self.max_pages:
-            current_url = self.url_queue.popleft()
+    async def worker(self, session, url_queue: Queue, batch, batch_size, stop_event):
+        while not stop_event.is_set():
+            try:
+                current_url, parent_url_id = await asyncio.wait_for(url_queue.get(), timeout=1)
+            except asyncio.TimeoutError:
+                if stop_event.is_set():
+                    break
+                continue
             if current_url in self.visited_urls:
+                url_queue.task_done()
                 continue
 
-            response = self.fetch_page(current_url)
+            response = await self.fetch_page(session, current_url)
             if not response:
+                url_queue.task_done()
                 continue
 
-            # build or fetch urlId. referencing previous function
             current_url_id = self.get_or_create_url_id(current_url)
 
-            # the part where we utilize contentExtractor and Indexer to extract and index the content
             last_modified = self.extractor.getLastModDate(response.headers)
             page_title = self.extractor.getTitle(response.text)
             body_text = self.extractor.getBodyText(response.text)
             body_words = self.extractor.splitWords(body_text)
-            processed_body_words = self.stop_stem.transform(body_words)  # lastly added stopstem part
+            processed_body_words = self.stop_stem.transform(body_words)
             self.indexer.addNewWord(processed_body_words)
             self.indexer.buildBodyInvertedIndex(processed_body_words, current_url_id)
             self.indexer.buildForwardIndex(processed_body_words, current_url_id)
 
-            # here we go one step further and index the title as well
             if page_title:
                 title_words = self.extractor.splitWords(page_title.lower())
-                processed_title_words = self.stop_stem.transform(title_words)  # do stopstem for this too
+                processed_title_words = self.stop_stem.transform(title_words)
                 self.indexer.addNewWord(processed_title_words)
                 self.indexer.buildTitleInvertedIndex(processed_title_words, current_url_id)
                 self.indexer.buildForwardIndex(processed_title_words, current_url_id)
 
-            # update DB after indexing is finished
-            self.indexer.updateSQLiteDB()
-
             page_size = str(self.extractor.getPagesize(response.headers, body_text))
 
-            # update last modification date, page title, page size
-            with self.db:
-                self.db.execute('INSERT OR REPLACE INTO id_to_last_modification_date (urlId, lastModificationDate) VALUES (?, ?)',
-                                (current_url_id, last_modified))
-                # Update page title
-                self.db.execute('INSERT OR REPLACE INTO id_to_page_title (urlId, pageTitle) VALUES (?, ?)',
-                                (current_url_id, page_title))
-                # Update page size
-                self.db.execute('INSERT OR REPLACE INTO id_to_page_size (urlId, pageSize) VALUES (?, ?)',
-                                (current_url_id, page_size))
-                self.db.commit()
+            batch.append((
+                current_url_id, last_modified, page_title, page_size
+            ))
 
             self.visited_urls.add(current_url)
 
-            # extract links from the hyperlink
             links = self.extractor.getLinks(current_url, response.text)
             for link in links:
-                # below line prevents cyclic links by avoiding already visited and enqueued urls
                 if link not in self.visited_urls and link not in self.enqueued_urls:
-                    self.url_queue.append(link)
+                    url_queue.put_nowait((link, current_url_id))
                     self.enqueued_urls.add(link)
                 child_id = self.get_or_create_url_id(link)
-                # after extracting a new id, update child's parent and parent's child
                 self.update_parents(child_id, current_url_id)
 
-            print(f"Crawled: {current_url} ({current_url_id})")
+            url_queue.task_done()
+            if len(self.visited_urls) % batch_size == 0:
+                self.flush_batch(batch)
+                print(f"Crawled: {len(self.visited_urls)} pages...")
 
-       
+            if len(self.visited_urls) >= self.max_pages:
+                stop_event.set()
+                break
+        
+        self.db.commit()
+
+    def flush_batch(self, batch):
+        # write all pending page info and update indexer DB (speeding up using batches)
+        with self.db:
+            for current_url_id, last_modified, page_title, page_size in batch:
+                self.db.execute('INSERT OR REPLACE INTO id_to_last_modification_date (urlId, lastModificationDate) VALUES (?, ?)',
+                                (current_url_id, last_modified))
+                self.db.execute('INSERT OR REPLACE INTO id_to_page_title (urlId, pageTitle) VALUES (?, ?)',
+                                (current_url_id, page_title))
+                self.db.execute('INSERT OR REPLACE INTO id_to_page_size (urlId, pageSize) VALUES (?, ?)',
+                                (current_url_id, page_size))
+        self.indexer.updateSQLiteDB()
+        self.db.commit()
+        batch.clear()
+
+    # used asyncio to fasten the crawling 
+    # and to avoid blocking the main thread
+    # reduced the total crawling time from 214 seconds for 300 pages to 27 seconds
+    # BONUS
+    async def crawl_async(self, num_workers=40, batch_size=10):
+        self.clear_spider_tables()
+        self.visited_urls = set()
+        self.enqueued_urls = set([self.start_url])
+        url_queue = Queue()
+        await url_queue.put((self.start_url, None))
+        start_time = time.time()
+        batch = []
+        stop_event = asyncio.Event()
+        async with aiohttp.ClientSession() as session:
+            workers = [asyncio.create_task(self.worker(session, url_queue, batch, batch_size, stop_event)) for _ in range(num_workers)]
+            await url_queue.join()
+            stop_event.set()
+            for w in workers:
+                w.cancel()
+            await asyncio.gather(*workers, return_exceptions=True)
+        # final flush
+        if batch:
+            self.flush_batch(batch)
         # bonus: summary info on database
         cursor = self.db.execute("SELECT name FROM sqlite_master WHERE type='table'")
         tables = [row[0] for row in cursor.fetchall()]
@@ -236,10 +306,20 @@ class Spider:
                 print(f"  {col[1]} ({col[2]})")
             print()
 
+        end_time = time.time()
+        elapsed = end_time - start_time
+        print(f"Total crawling time: {elapsed:.2f} seconds")
+
+        self.db.commit()
+
+    def crawl(self):
+        asyncio.run(self.crawl_async())
+        self.db.commit()
+
 
 if __name__ == "__main__":
     # thread-safe connection
-    db_connection = sqlite3.connect("main.db", check_same_thread=False)  
+    db_connection = sqlite3.connect("main.db", check_same_thread=False)
     db_connection.execute("PRAGMA journal_mode=WAL;")  # for concurrency issues, allow WAL mode
     indexer = Indexer(db_connection)  # pass shared connection to Indexer
     spider = Spider(
@@ -249,7 +329,9 @@ if __name__ == "__main__":
         indexer=indexer
     )
     spider.crawl()
+
     db_connection.commit()
+
     db_connection.close()  # close the connection after crawling
 
 

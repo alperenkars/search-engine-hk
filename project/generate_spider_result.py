@@ -18,15 +18,15 @@ def generate_spider_result(db_path: str, output_file: str):
             # fetch page title, last modification date, and page size
             cursor.execute("SELECT pageTitle FROM id_to_page_title WHERE urlId = ?", (url_id,))
             page_title_row = cursor.fetchone()
-            page_title = page_title_row[0] if page_title_row else "N/A"
+            page_title = page_title_row[0] if page_title_row else ""
 
             cursor.execute("SELECT lastModificationDate FROM id_to_last_modification_date WHERE urlId = ?", (url_id,))
             last_mod_date_row = cursor.fetchone()
-            last_mod_date = last_mod_date_row[0] if last_mod_date_row else "N/A"
+            last_mod_date = last_mod_date_row[0] if last_mod_date_row else ""
 
             cursor.execute("SELECT pageSize FROM id_to_page_size WHERE urlId = ?", (url_id,))
             page_size_row = cursor.fetchone()
-            page_size = page_size_row[0] if page_size_row else "N/A"
+            page_size = page_size_row[0] if page_size_row else ""
 
             # fetch keywords and their frequencies (up to 10, as specified in the handout)
             cursor.execute("SELECT value FROM forward_index WHERE urlId = ?", (url_id,))
@@ -37,7 +37,7 @@ def generate_spider_result(db_path: str, output_file: str):
             for word_id in word_ids:
                 cursor.execute("SELECT word FROM id_to_word WHERE wordId = ?", (word_id,))
                 word_row = cursor.fetchone()
-                word = word_row[0] if word_row else "N/A"
+                word = word_row[0] if word_row else ""
 
                 cursor.execute("SELECT value FROM body_inverted_index WHERE wordId = ?", (word_id,))
                 body_data_row = cursor.fetchone()
@@ -57,7 +57,7 @@ def generate_spider_result(db_path: str, output_file: str):
                 for child_id in child_ids:
                     cursor.execute("SELECT url FROM id_to_url WHERE urlId = ?", (child_id,))
                     child_url_row = cursor.fetchone()
-                    child_links.append(child_url_row[0] if child_url_row else "N/A")
+                    child_links.append(child_url_row[0] if child_url_row else "")
 
             # write them all to file
             file.write(f"{page_title}\n")
