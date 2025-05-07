@@ -42,6 +42,8 @@ class Spider:
         self.stop_stem = StopwordRemovalStem()  # stopword removal and stemming part
         self.create_spider_tables()
 
+        self.db.commit()
+
     def create_spider_tables(self):
         with self.db:
             # 1. url_to_id
@@ -101,6 +103,8 @@ class Spider:
                 )
             ''')
 
+        self.db.commit()
+
     def clear_spider_tables(self):
          # to see the results clearly
         with self.db:
@@ -112,6 +116,9 @@ class Spider:
             self.db.execute("DELETE FROM id_to_page_size")
             self.db.execute("DELETE FROM id_to_children_url_id")
             self.db.execute("DELETE FROM id_to_parents_url_id")
+
+        self.db.commit()
+
         # also clear indexer tables 
         self.indexer.prepareSQLiteDB()
         self.indexer.updateSQLiteDB()
@@ -149,6 +156,9 @@ class Spider:
             self.db.execute('INSERT INTO url_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
             self.db.execute('INSERT INTO id_to_url (urlId, url) VALUES (?, ?)', (new_id, url))
             self.db.execute('INSERT INTO crawled_page_to_id (url, urlId) VALUES (?, ?)', (url, new_id))
+        
+        self.db.commit()
+
         return new_id
 
     def update_parents(self, child_id: str, parent_id: str):
@@ -165,6 +175,8 @@ class Spider:
                 self.db.execute('UPDATE id_to_parents_url_id SET parentsUrlId=? WHERE urlId=?', (updated_parents, child_id))
         else:
             self.db.execute('INSERT INTO id_to_parents_url_id (urlId, parentsUrlId) VALUES (?, ?)', (child_id, parent_id))
+        
+        self.db.commit()
 
         # update parent => children now
         cursor = self.db.execute('SELECT childrenUrlId FROM id_to_children_url_id WHERE urlId = ?', (parent_id,))
@@ -176,6 +188,8 @@ class Spider:
                 self.db.execute('UPDATE id_to_children_url_id SET childrenUrlId=? WHERE urlId=?', (updated_children, parent_id))
         else:
             self.db.execute('INSERT INTO id_to_children_url_id (urlId, childrenUrlId) VALUES (?, ?)', (parent_id, child_id))
+        
+        self.db.commit()
 
     async def worker(self, session, url_queue: Queue, batch, batch_size, stop_event):
         while not stop_event.is_set():
@@ -236,6 +250,8 @@ class Spider:
             if len(self.visited_urls) >= self.max_pages:
                 stop_event.set()
                 break
+        
+        self.db.commit()
 
     def flush_batch(self, batch):
         # write all pending page info and update indexer DB (speeding up using batches)
@@ -248,6 +264,7 @@ class Spider:
                 self.db.execute('INSERT OR REPLACE INTO id_to_page_size (urlId, pageSize) VALUES (?, ?)',
                                 (current_url_id, page_size))
         self.indexer.updateSQLiteDB()
+        self.db.commit()
         batch.clear()
 
     # used asyncio to fasten the crawling 
@@ -293,8 +310,11 @@ class Spider:
         elapsed = end_time - start_time
         print(f"Total crawling time: {elapsed:.2f} seconds")
 
+        self.db.commit()
+
     def crawl(self):
         asyncio.run(self.crawl_async())
+        self.db.commit()
 
 
 if __name__ == "__main__":
@@ -309,6 +329,9 @@ if __name__ == "__main__":
         indexer=indexer
     )
     spider.crawl()
+
+    db_connection.commit()
+
     db_connection.close()  # close the connection after crawling
 
 
