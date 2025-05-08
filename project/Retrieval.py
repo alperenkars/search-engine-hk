@@ -311,26 +311,22 @@ class Retrieval:
 
 if __name__ == "__main__":
     retrieval = Retrieval("main.db")
-    query = 'the roman empire'
+    query = 'classification for "information retrieval"'
     results = retrieval.retrieve(query)
 
     for result in results:
-        """
-        print(f
-        Doc ID: {result['doc_id']}, 
-        Score: {result['score']},
-        Title: {result['title']},
-        URL: {result['url']},
-        Last Modification Date: {result['last_modification_date']},
-        Page Size: {result['page_size']},
-        Keywords and Frequencies: 
-        {"; ".join(result['keywords_frequencies'])}
-
-        Parent links: 
-        {"\n".join(result['parent_links'])}
-
-        Child links: 
-        {"\n".join(result['child_links'])}
-        )
-        """
-        # print(f"\nDoc ID: {result['doc_id']}, \nURL: {result['url']}, \nTitle: {result['title']}, \nScore: {result['score']}")
+        print(f'Document ID: {result["doc_id"]}')
+        print(f'Score: {result["score"]}')
+        print(f'Title: {result["title"]}')
+        print(f'URL: {result["url"]}')
+        print(f'Last Modification Date: {result["last_modification_date"]}')
+        print(f'Page Size: {result["page_size"]}')
+        print(f'Keywords and Frequencies: {"; ".join(result["keywords_frequencies"])}')
+        print(f'Parent Links:')
+        for link in result["parent_links"]:
+            print(link)
+        print(f'Child Links:')
+        for link in result["child_links"]:
+            print(link)
+        print(f'Top 5 Frequent Keywords: {result["top5FrequentKeywords"]}')
+        print("\n")
