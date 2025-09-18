@@ -1,52 +1,80 @@
-# (For Final Phase)
+# Web Search Engine Project
 
-This is the README for COMP4321 Group Project (Group 19). I would teach you how to prepare the virtual Python environment, and how to build and execute the spider, and how to start the Django web server to display the web user interface of our search engine using Git Bash Terminal in Your VS Code using Windows machine.
-
-We would use Python (version 3.11.5), pip (version 23.2.1), VS Code’s Git Bash Terminal, Google Chrome browser and a Windows 11 machine. please prepare them beforehand.
+This project was developed as part of **COMP4321: Information Retrieval & Web Search** at The Hong Kong University of Science and Technology. It implements a miniature web-based search engine with a crawler, indexer, and retrieval system, complete with a user interface.
 
 ---
 
-# How to set up your local virtual Python environment & install all necessary packages?
+## Features
 
-## For Windows
+- **Web Crawler (Spider)**  
+  - Uses a breadth-first search (BFS) strategy to recursively fetch and index pages from a given URL.  
+  - Handles cyclic links and modified pages gracefully.  
+  - Builds a parent/child link structure for navigation.  
 
-0. (If you have go through the installation procedure in our final report, you can skip this part.)
+- **Indexer**  
+  - Extracts keywords from page titles and bodies.  
+  - Removes stop words and applies Porter stemming algorithm.  
+  - Creates inverted files supporting phrase queries (e.g., `"hong kong"`).  
+  - Stores and manages data with **SQLite**.  
 
-1. After you have unzipped the file `FinalPhase.zip`, you should see another zip file inside the unzipped folder `FinalPhase`, which is called `code.zip`. This zip file should contain all the necessary source codes of our project.
+- **Retrieval (Search Engine)**  
+  - Implements the **vector space model** with TF–IDF weighting.  
+  - Computes cosine similarity to rank results.  
+  - Prioritizes matches in page titles for more relevant results.  
+  - Returns up to 50 results ranked by score.  
 
-2. Unzip `code.zip` and you would get a folder called `code`. Open your Git Bash terminal in Visual Studio Code (VS Code), and make sure you are in the same directory location where the folder `project` and `requirements.txt` is being placed. Type `py -m venv venv` to create a new virtual environment called `venv`.
-
-3. Wait for a while and the virtual environment would be set up for you. Then, activate the virtual environment by typing `source venv/Scripts/activate`. You should see `(venv)` in your command line interface if you have successfully activated the virtual environment.
-
-4. Then, install all the requirements using `pip install -r requirements.txt` command. After that, you can type `pip freeze` to see what packages have been successfully installed.
-
-5. You should successfully install all necessary packages and the virtual environment should be ready now.
-
----
-
-# Where is the Spider?
-
-## For Windows
-
-1. After you have prepared the local virtual Python environment by following the instructions from the above, you should get inside the directory cd project by entering `cd project`. Inside the directory, the Spider is located in `Spider.py`.
-
-2. The `Spider.py` script is used to crawl web pages and store the data in `main.db`.
+- **Web Interface**  
+  - Query box for keyword and phrase searches.  
+  - Displays results with score, title, URL, metadata (last modified, size), frequent keywords, and parent/child links.  
+  - Results are hyperlinked for easy access.  
 
 ---
 
-# How to run the Spider?
+## Technology Stack
 
-## For Windows
-
-1. Once again please make sure your virtual environment is already activated. First, run the Spider by entering `python Spider.py` to start the crawling process. This should take around 30 seconds to complete crawling maximum 300 pages. After the crawling process is finished, you should see `main.db` is generated. This SQLite database stores all the database table files that contain the indexed 300 pages (at maximum) starting from `https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm`.
+- **Python** (main implementation)  
+- **Django** (web interface)  
+- **SQLite** (database management)  
+- **HTML Parser** (for page parsing)  
 
 ---
 
-# How to start up the Django web server & see the web user interface?
+## Example Use Case
+
+1. Provide a starting URL and number of pages to index.  
+2. The crawler fetches and stores pages.  
+3. Queries like `"hong kong universities"` are processed.  
+4. Results are ranked and displayed on the web interface.  
+
+---
+
+## Project Context
+
+This project was completed as the final assignment for **COMP4321**. It demonstrates concepts in information retrieval, web crawling, inverted indexing, and query processing, similar to the foundations of modern search engines.
+
+
+# How to set up your local virtual Python environment & install all necessary packages
+
+1. Open your Git Bash terminal and make sure you are in the project directory. Type `py -m venv venv` to create a new virtual environment called `venv`.
+
+2. Then, activate the virtual environment by typing `source venv/Scripts/activate`. You should see `(venv)` in your command line interface if you have successfully activated the virtual environment.
+
+3. Install all the requirements using `pip install -r requirements.txt` command. After that, you can type `pip freeze` to see what packages have been successfully installed.
+
+---
+
+# How to run Spider
+
+1. After activating the virtual environment, run the Spider by entering `python Spider.py` to start the crawling process. After the crawling process is finished, you should see `main.db` is generated. This SQLite database stores all the database table files that contain the indexed 30 pages starting from `https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm`.
+
+2. Then, you can run the test program by entering `python generate_spider_result.py`. After a while, you should see `spider_result.txt` is generated. This txt file would contain the output of the test program.
+
+
+# How to start up the Django web server & see the web user interface
 
 ## For Windows
 
-1. After you have finish running the Spider, make sure you are still locating inside the `project` directory. Then, you can start the Django web server by typing `python manage.py runserver`.
+1. After you finish running the Spider, make sure you are still located inside the `project` directory. Then, you can start the Django web server by typing `python manage.py runserver`.
 
 2. Wait for a short while, and you should see there is a link `http://127.0.0.1:8000/` appeared in the terminal. Click on that link, or simply type in this link in your browser to go to the web user interface. (Note: You may encounter an error when you get into this link. This is due to the existence of the cookies from other groups. You can follow Step 3 below to solve this problem.)
 
@@ -54,7 +82,7 @@ We would use Python (version 3.11.5), pip (version 23.2.1), VS Code’s Git Bash
 
 ---
 
-# What you can do with the web user interface?
+# What can you do with the web user interface?
 
 ## For Windows
 
@@ -66,84 +94,3 @@ We would use Python (version 3.11.5), pip (version 23.2.1), VS Code’s Git Bash
 
 4. After you have searched for a few queries, you can see the left section would contain you latest 10 searching query history, you can click on one of it to do the query. You can also click `Clear History` to clean all query histories.
 
----
-
-# How to turn off the Django web server?
-
-## For Windows
-
-1. Go back to your Git Bash Terminal in VS Code, and press `Ctrl` and `C` keys at the same time to terminate the running of the Django web server.
-
-2. Deactivate the local virtual Python environment by typing `deactivate`.
-
----
----
----
-
-# (For Phase 1)
-
-This is the README for COMP4321 Group Project (Group 19). I would teach you how to prepare the virtual Python environment, and how to build and execute the spider and the test program using Git Bash Terminal in Your VS Code using Windows machine.
-
----
-
-# How to set up your local virtual Python environment?
-
-## For Windows
-
-1. After you have unzip the file `Phase1.zip`, you should see another zip file inside the unzipped folder `Phase1`, which is called `code.zip`. This zip file should contain all the necessary source codes of our project.
-
-2. Unzip `code.zip` and you would get a folder called `code`. Open your Git Bash terminal in Visual Studio Code (VS Code), and make sure you are in the same directory location where the folder `project` and `requirements.txt` is being placed. Type `py -m venv venv` to create a new virtual environment called `venv`.
-
-3. Wait for a while and the virtual environment would be set up for you. Then, activate the virtual environment by typing `source venv/Scripts/activate`. You should see `(venv)` in your command line interface if you have successfully activated the virtual environment.
-
-4. Then, install all the requirements using `pip install -r requirements.txt` command. After that, you can type `pip freeze` to see what packages have been successfully installed.
-
-5. You should successfully installed all necessary packages and the virtual environment should be ready now.
-
----
-
-# Where is the Spider and the test program?
-
-## For Windows
-
-1. After you have prepared the local virtual Python environment by following the instructions from the above, you should get inside the directory cd project by entering `cd project`. Inside the directory, the Spider is located in `Spider.py` and the test program is located in `generate_spider_result.py`.
-
-2. The `Spider.py` script is used to crawl web pages and store the data in `main.db`, while `generate_spider_result.py` processes the crawled data to generate results in `spider_result.txt`, which is similar to the ones in the project description handout.
-
----
-
-# How to run the Spider and the test program to generate the result?
-
-## For Windows
-
-1. Once again please make sure your virtual environment is already activated. First, run the Spider by entering `python Spider.py` to start the crawling process. This should take around 2 minutes to completing crawling 30 pages. After the crawling process is finished, you should see `main.db` is generated. This SQLite database stores all the database table files that contain the indexed 30 pages starting from `https://www.cse.ust.hk/~kwtleung/COMP4321/testpage.htm`.
-
-2. Then, you can start to run the test program by entering `python generate_spider_result.py`. After a while, you should see `spider_result.txt` is generated. This txt file would contain the output of the test program.
-
----
-
-# How to set up in your local environment
-
-## For Windows
-
-1. After you have successfully clone this repository to your local machine, make sure you are in the same direcory location where this README.md is being placed. Open your Git Bash terminal and type `py -m venv venv` to create a new virtual environment called `venv`.
-
-2. Wait for a while and the virtual environment would be set up for you. Then, activate the virtual envioronment by typing `source venv/Scripts/activate`. You should see `(venv)` in your command line interface if you have successfully activated the virtual environment.
-
-3. Then, install all the requirements using `pip install -r requirements.txt` command. After that, you can type `pip freeze` to see what packages have been successfully installed.
-
-4. Get into `project` directory by typing `cd project`. Type `python manage.py runserver` to start the Django app server. Search `http://localhost:8000/` or `http://127.0.0.1:8000/` in your browser and you should be able to see the index page of our project. Press `Ctrl C` if you want to stop the Django app server from running.
-
----
-
-# Running the Spider and Generating Results
-
-The `Spider.py` script is used to crawl web pages and store the data, while `generate_spider_result.py` processes the crawled data to generate results similar to the ones in the handout. To run these scripts, ensure your virtual environment is activated. Then after navigating to project folder, use `python Spider.py` to start the crawling process and `python generate_spider_result.py` to process the data. Note again that both scripts should be executed from the root directory of the project.
-
----
-
-# Useful References
-
-* https://www.djangoproject.com/start/
-
-* https://youtu.be/iKD1BwIfwNw?si=ZgYxBr0wMxeN0L0I
